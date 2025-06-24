@@ -1,2 +1,2 @@
-# anupama-creator.github.io
+# anupama
 My academic website
