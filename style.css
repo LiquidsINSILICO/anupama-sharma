@@ -65,7 +65,7 @@ p {
   color: #023e8a;
 }
 
-justified-text {
+.justified-text {
   text-align: justify;
   color: black;
   max-width: 800px;
