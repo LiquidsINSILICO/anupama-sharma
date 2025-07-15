@@ -10,21 +10,22 @@
       font-family: 'Segoe UI', sans-serif;
       background-color: #f5f5f5;
       color: #333;
-    }
-
-    .top-bar {
-      background-color: #ccc;
-      padding: 1rem 2rem;
-      text-align: right;
-      font-weight: bold;
-      font-size: 1.5rem;
-      color: #333;
+      padding-bottom: 80px; /* to avoid overlap with fixed nav */
     }
 
     .about-container {
       max-width: 1000px;
       margin: 0 auto;
       padding: 2rem;
+    }
+
+    .top-bar {
+      background-color: #ccc;
+      padding: 1rem 2rem;
+      text-align: left;
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #333;
     }
 
     h2 {
@@ -63,8 +64,10 @@
 </head>
 <body>
 
+  <!-- Top Bar -->
   <div class="top-bar">About Me</div>
 
+  <!-- Main Content -->
   <div class="about-container">
     <h2>Current Position</h2>
     <p>
