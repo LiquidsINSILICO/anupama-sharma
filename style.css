@@ -2,19 +2,20 @@ body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(to right, #f0f4f8, #d9e2ec);
-  padding: 0;
-  /* Removed unnecessary display: block */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
   text-align: center;
   padding: 2rem;
-  padding-bottom: 6rem; /* Leave space for bottom nav */
+  padding-bottom: 6rem; /* Prevents overlap with nav */
   background-color: white;
   box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
   border-radius: 12px;
   max-width: 600px;
-  margin: 2rem auto; /* Center horizontally and add top spacing */
+  margin: auto; /* centers the container */
 }
 
 .profile-pic {
@@ -36,23 +37,13 @@ p {
   font-size: 1rem;
 }
 
-.navigation {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #ffffff;
-  border-top: 1px solid #ccc;
-  padding: 1rem 0;
-  text-align: center;
-  z-index: 10;
-}
-
-.navigation a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #0077b6;
-  font-weight: bold;
-  font-size: 1.1em;
+.justified-text {
+  text-align: justify;
+  color: black;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.05em;
+  line-height: 1.6;
 }
 
 .social-icons {
@@ -72,11 +63,22 @@ p {
   color: #023e8a;
 }
 
-.justified-text {
-  text-align: justify;
-  color: black;
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 1.05em;
-  line-height: 1.6;
+.navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  border-top: 1px solid #ccc;
+  padding: 1rem 0;
+  text-align: center;
+  z-index: 100;
+}
+
+.navigation a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #0077b6;
+  font-weight: bold;
+  font-size: 1.1em;
 }
