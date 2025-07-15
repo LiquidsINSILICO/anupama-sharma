@@ -103,3 +103,10 @@ p {
 .dark-blue {
   color: #003366;
 }
+
+.centered-line {
+  width: 1000px;
+  margin: 2rem auto;
+  border: none;
+  border-top: 2px solid #ccc;
+}
