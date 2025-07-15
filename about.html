@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <title>About Me - Anupama Sharma</title>
   <link rel="stylesheet" href="style.css" />
+  <div class="top-bar">
+  <div class="top-bar-inner">About Me</div>
+</div>
   <style>
     body {
       margin: 0;
@@ -21,13 +24,18 @@
 
     .top-bar {
   background-color: #ccc;
-  padding: 1rem 2rem;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.top-bar-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
   font-weight: bold;
   font-size: 1.5rem;
   color: #333;
-  max-width: 1000px;         /* Same as .about-container */
-  margin: 0 auto;            /* Center horizontally */
-  text-align: left;          /* Text aligned to the left inside the box */
+  text-align: left;
 }
 
     h2 {
