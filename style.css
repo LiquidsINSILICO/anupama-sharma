@@ -17,11 +17,15 @@ body {
   max-width: 600px;
   width: 90%;
   
-  /* Perfect centering using absolute positioning */
+  /* Center using viewport calculations */
   position: absolute;
-  top: 50%;
+  top: calc(50vh - 40px); /* 50% of viewport height minus half nav height */
   left: 50%;
   transform: translate(-50%, -50%);
+  
+  /* Ensure content doesn't overflow */
+  max-height: calc(100vh - 120px); /* Full height minus nav and padding */
+  overflow-y: auto;
 }
 
 /* Fixed navigation at the bottom */
@@ -46,23 +50,26 @@ body {
 
 /* Profile image */
 .profile-pic {
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 1rem;
-  border: 3px solid #0077b6;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 /* Text styles */
 h1 {
   margin: 0.5rem 0;
   color: #333;
+  margin-top: 20px;
 }
 
 p {
   color: #555;
-  font-size: 1rem;
+  font-size: 1.1em;
+  margin-bottom: 20px;
 }
 
 /* Social icons */
@@ -73,14 +80,14 @@ p {
 .social-icons a {
   text-decoration: none;
   margin: 0 10px;
-  font-size: 1.4rem;
-  color: #0077b6;
+  font-size: 1.5em;
+  color: #333;
   transition: transform 0.2s ease;
 }
 
 .social-icons a:hover {
   transform: scale(1.2);
-  color: #023e8a;
+  color: #0077b6;
 }
 
 /* Justified paragraph */
@@ -89,6 +96,6 @@ p {
   color: black;
   max-width: 800px;
   margin: 0 auto;
-  font-size: 1.05em;
+  font-size: 1.1em;
   line-height: 1.6;
 }
