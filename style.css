@@ -40,12 +40,22 @@ p {
   margin-top: 1.5rem;
 }
 
+.navigation {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 1px solid #ccc;
+  padding: 1rem 0;
+  text-align: center;
+}
+
 .navigation a {
+  margin: 0 15px;
   text-decoration: none;
   color: #0077b6;
-  margin: 0 1rem;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.1em;
 }
 
 .social-icons {
