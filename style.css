@@ -64,3 +64,12 @@ p {
   transform: scale(1.2);
   color: #023e8a;
 }
+
+justified-text {
+  text-align: justify;
+  color: black;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.05em;
+  line-height: 1.6;
+}
