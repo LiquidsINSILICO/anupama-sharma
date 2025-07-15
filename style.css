@@ -6,6 +6,8 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center; /* This centers the content vertically */
+  align-items: center; /* This centers the content horizontally */
 }
 
 /* Main content container */
@@ -18,7 +20,8 @@ body {
   border-radius: 12px;
   max-width: 600px;
   width: 90%;
-  margin: 2rem auto; /* vertical centering */
+  /* Remove the margin since flexbox centers it now */
+  margin: 0 auto; /* Keep horizontal centering as fallback */
 }
 
 /* Fixed navigation at the bottom */
