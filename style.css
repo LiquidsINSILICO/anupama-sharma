@@ -2,18 +2,19 @@ body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(to right, #f0f4f8, #d9e2ec);
-  display: block;
-  padding-bottom: 80px; /* Reserve space for bottom nav */
+  padding: 0;
+  /* Removed unnecessary display: block */
 }
 
 .container {
   text-align: center;
   padding: 2rem;
-  padding-bottom: 5rem; /* Add this line */
+  padding-bottom: 6rem; /* Leave space for bottom nav */
   background-color: white;
   box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
   border-radius: 12px;
   max-width: 600px;
+  margin: 2rem auto; /* Center horizontally and add top spacing */
 }
 
 .profile-pic {
@@ -36,10 +37,6 @@ p {
 }
 
 .navigation {
-  margin-top: 1.5rem;
-}
-
-.navigation {
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -47,6 +44,7 @@ p {
   border-top: 1px solid #ccc;
   padding: 1rem 0;
   text-align: center;
+  z-index: 10;
 }
 
 .navigation a {
