@@ -125,3 +125,24 @@ p {
 .small-heading {
   font-size: 1.3rem;
 }
+
+.skills-table {
+  max-width: 1000px;
+  margin: 2rem auto;
+  font-size: 1.1rem;
+  border-spacing: 0 0.5rem;
+}
+
+.skills-table td:first-child {
+  white-space: nowrap;
+  vertical-align: top;
+  padding-right: 0.5rem;
+  font-weight: bold;
+  color: #0077b6;
+  text-align: right;
+  width: 220px; /* adjust as needed */
+}
+
+.skills-table td:last-child {
+  text-align: left;
+}
