@@ -121,3 +121,7 @@ p {
   border: none;
   border-top: 4px solid #000; /* 4px thick, black color */
 }
+
+.small-heading {
+  font-size: 1.3rem;
+}
