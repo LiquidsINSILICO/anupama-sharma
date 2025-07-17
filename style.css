@@ -287,3 +287,15 @@ publication link
 .cover-link:hover {
   color: #023e8a;
 }
+
+/* ================================
+Cover page in the background of publication
+================================== */
+
+body.publications-page {
+  background-image: url('images/JPCB-coverpage.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
