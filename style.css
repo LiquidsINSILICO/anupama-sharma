@@ -4,40 +4,20 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(to right, #f0f4f8, #d9e2ec);
   min-height: 100vh;
-  position: relative;
+  padding-top: 70px; /* spacing for fixed navbar */
 }
 
-/* Main content container */
-.container {
-  text-align: center;
-  padding: 2rem;
-  background-color: white;
-  box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
-  border-radius: 12px;
-  max-width: 600px;
-  width: 90%;
-  
-  /* Center using viewport calculations */
-  position: absolute;
-  top: calc(50vh - 40px); /* 50% of viewport height minus half nav height */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
-  /* Ensure content doesn't overflow */
-  max-height: calc(100vh - 120px); /* Full height minus nav and padding */
-  overflow-y: auto;
-}
-
-/* Fixed navigation at the bottom */
+/* Fixed top navigation */
 .navigation {
   position: fixed;
-  bottom: 0;
+  top: 0;
   width: 100%;
   background-color: #ffffff;
-  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
   padding: 0.8rem 0;
   text-align: center;
-  z-index: 100;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .navigation a {
@@ -46,6 +26,23 @@ body {
   color: #0077b6;
   font-weight: bold;
   font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+  color: #023e8a;
+}
+
+/* Main content container */
+.container {
+  text-align: center;
+  background-color: white;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  max-width: 800px;
+  width: 90%;
+  margin: 2rem auto;
+  padding: 2rem;
 }
 
 /* Profile image */
@@ -56,14 +53,13 @@ body {
   border-radius: 50%;
   margin-bottom: 1rem;
   border: 4px solid #fff;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Text styles */
 h1 {
   margin: 0.5rem 0;
   color: #333;
-  margin-top: 20px;
 }
 
 p {
@@ -72,17 +68,26 @@ p {
   margin-bottom: 20px;
 }
 
+.justified-text {
+  text-align: justify;
+  color: black;
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin: 1.5rem auto;
+  max-width: 90%;
+}
+
 /* Social icons */
 .social-icons {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .social-icons a {
   text-decoration: none;
   margin: 0 10px;
-  font-size: 1.5em;
+  font-size: 1.6em;
   color: #333;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .social-icons a:hover {
@@ -90,16 +95,24 @@ p {
   color: #0077b6;
 }
 
-/* Justified paragraph */
-.justified-text {
-  text-align: justify;
-  color: black;
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 1.1em;
-  line-height: 1.6;
+/* CV Button */
+.cv-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 1rem;
+  background-color: #0077b6;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
+.cv-button:hover {
+  background-color: #023e8a;
+}
+
+/* Utility styles */
 .dark-blue {
   color: #003366;
 }
@@ -109,23 +122,26 @@ p {
 }
 
 .centered-line {
-  width: 1000px;
+  width: 100%;
+  max-width: 1000px;
   margin: 2rem auto;
   border: none;
   border-top: 2px solid #ccc;
 }
 
-  .centered-thick-line {
-  width: 1000px;
+.centered-thick-line {
+  width: 100%;
+  max-width: 1000px;
   margin: 2rem auto;
   border: none;
-  border-top: 4px solid #000; /* 4px thick, black color */
+  border-top: 4px solid #000;
 }
 
 .small-heading {
   font-size: 1.3rem;
 }
 
+/* Skills table */
 .skills-table {
   max-width: 1000px;
   margin: 2rem auto;
@@ -140,7 +156,7 @@ p {
   font-weight: bold;
   color: #0077b6;
   text-align: right;
-  width: 220px; /* adjust as needed */
+  width: 220px;
 }
 
 .skills-table td:last-child {
