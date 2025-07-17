@@ -5,34 +5,30 @@
   <title>About Me - Anupama Sharma</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f5f5f5;
-      color: #333;
-      padding-bottom: 80px; /* to avoid overlap with fixed nav */
-    }
-
     .about-container {
       max-width: 1000px;
       margin: 0 auto;
       padding: 2rem;
+      padding-bottom: 6rem; /* ensures content doesn't clash with fixed nav */
     }
-    
+
     .top-bar {
       background-color: #ccc;
       width: 100%;
-      /* Remove this line: padding: 2rem; */
-      }
+    }
 
     .top-bar-inner {
       max-width: 1000px;
       margin: 0 auto;
-      padding: 2rem; /* vertical + horizontal padding */
+      padding: 2rem;
       font-weight: bold;
       font-size: 2rem;
       color: #333;
       text-align: left;
+    }
+
+    .nested-list {
+      margin-left: 1.5rem;
     }
 
     h2 {
@@ -49,29 +45,11 @@
     ul {
       padding-left: 1.5rem;
     }
-
-    nav.navigation {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background-color: #ffffff;
-      border-top: 1px solid #ccc;
-      padding: 1rem 0;
-      text-align: center;
-    }
-
-    nav.navigation a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #0077b6;
-      font-weight: bold;
-      font-size: 1.1em;
-    }
   </style>
 </head>
 <body>
 
-  <!-- Top Bar (correct placement and structure) -->
+  <!-- Top Bar -->
   <div class="top-bar">
     <div class="top-bar-inner">About Me</div>
   </div>
@@ -79,198 +57,135 @@
   <!-- Main Content -->
   <div class="about-container">
     <h2>Current Position</h2>
+    <p><span class="dark-blue">Postdoctoral Research Associate (March 2025 - ongoing)</span></p>
     <p>
-      <span class="dark-blue">Postdoctoral Research Associate (March 2025 - ongoing)</span>
-    </p>
-    <p>
-    Center for Computational Natural Sciences and Bioinformatics <br>
+      Center for Computational Natural Sciences and Bioinformatics <br>
       International Institute of Information Technology, <br>
-      Technology, Gachibowli, Hyderabad 500032
+      Gachibowli, Hyderabad 500032
     </p>
     <p>
       <strong>Advisor:</strong> Prof. U Deva Priyakumar
       (<a href="https://devalab.in/index.html#features12-a" target="_blank">Homepage</a>)
-      </p>
+    </p>
+
     <hr class="centered-line" />
     <p><span class="black">Responsibilities</span></p>
     <ul>
       <li>
         C-allotrope dispersion
-        <div style="margin-left: 1.5rem;">
-          Conceptualization of the project, progressing it independently. </br>
+        <div class="nested-list">
+          Conceptualization of the project, progressing it independently.<br>
           Project investigates the role of ionic liquids in the dissolution of carbon allotropes, a major challenge that limits the application of their exceptional
           properties across diverse fields. I am utilizing the enhanced sampling approach to study the free energy change during the separation process of carbon 
           allotropes in chosen ionic liquids as a function of carbon allotrope geometry.
-          </div>
+        </div>
       </li>
       <li>
-        High Energy Structure Dataset (HES) Project.
-        <div style="margin-left: 1.5rem;">
-          Conduct and analyze Steered MD Simulation of Protein-Ligand Complexes for the HES Dataset Project. </br>
-          Mentoring Junior Research Interns working on the High Energy Structure Project. Checking and preparing codes for the analysis along with manuscript preparation.
-          </div>
-        </li>
+        High Energy Structure Dataset (HES) Project
+        <div class="nested-list">
+          Conduct and analyze Steered MD Simulation of Protein-Ligand Complexes for the HES Dataset Project.<br>
+          Mentoring Junior Research Interns, checking and preparing codes for analysis, and assisting in manuscript preparation.
+        </div>
+      </li>
       <li>
         Intrinsically Disordered Protein
-        <div style="margin-left: 1.5rem;">
-          Worked on Benchmark Study of Intrinsically Disordered Protein - Water Model force fields combination. </br>
-          Supported students with simulations and analysis tasks. Wrote custom analysis and visualization codes in Fortran and Python. </br>
-          Prepared manuscript.
-          </div>
-        </li>
+        <div class="nested-list">
+          Worked on benchmark study of IDP–Water Model force field combinations.<br>
+          Supported students with simulations and analysis tasks.<br>
+          Wrote custom analysis and visualization codes in Fortran and Python. Prepared manuscript.
+        </div>
+      </li>
       <li>
         Bio-catalytic Enzyme Reaction Study
-        <div style="margin-left: 1.5rem;">
-          Contributed in studying the role of the BmHNL enzyme in the diastereoselective Henry reaction for producing 2-nitro-1-phenylpropan-1-ol. I worked on identifying the
-          catalytic triad, performing docking and molecular dynamics simulations, and generating cluster-based models for DFT studies.
-          </div>
-        </li>
-      </ul>
+        <div class="nested-list">
+          Contributed to studying the role of BmHNL enzyme in the Henry reaction for producing 2-nitro-1-phenylpropan-1-ol.<br>
+          Involved in identifying the catalytic triad, performing docking and MD simulations, and generating cluster-based models for DFT.
+        </div>
+      </li>
+    </ul>
+
     <hr class="centered-line" style="margin-bottom: 0.2rem;" />
     <hr class="centered-thick-line" style="margin-top: 0.2rem;" />
+
     <h2>Experience</h2>
     <h2 class="small-heading">Research Experience</h2>
-     <p>
-      <span class="dark-blue">Senior Research Fellow (June 2024 - Feb 2025)</span>
-    </p>
+    <p><span class="dark-blue">Senior Research Fellow (June 2024 - Feb 2025)</span></p>
     <p>
-    IHUB DATA FOUNDATION <br>
-      International Institute of Information Technology, <br>
-      Professor CR Rao Rd, Gachibowli,</br>
-    Hyderabad, Telangana 500032
+      IHUB DATA FOUNDATION <br>
+      International Institute of Information Technology, Gachibowli, Hyderabad 500032
     </p>
     <p>
       <strong>Advisor:</strong> Prof. U Deva Priyakumar
       (<a href="https://ihub-data.iiit.ac.in/events#features12-a" target="_blank">Homepage</a>)
-      </p>
+    </p>
+
     <hr class="centered-line" />
     <h2 class="small-heading">Teaching Assistantship</h2>
-    <p>
-      <span class="dark-blue">Physics of Soft Condensed Matter (S25SC2:301), Spring-2025</span>
-      </p>
-    <p>
-      <span class="dark-blue">General and Structural Chemistry (S25SC2:101), Spring-2025</span>
-      </p>
-    <p>
-      <span class="dark-blue">Biomolecular Structure Interaction and Dynamics (SC3.321), Monsoon-2024</span>
-      </p>
+    <p><span class="dark-blue">Physics of Soft Condensed Matter (S25SC2:301), Spring-2025</span></p>
+    <p><span class="dark-blue">General and Structural Chemistry (S25SC2:101), Spring-2025</span></p>
+    <p><span class="dark-blue">Biomolecular Structure Interaction and Dynamics (SC3.321), Monsoon-2024</span></p>
+
     <hr class="centered-line" style="margin-bottom: 0.2rem;" />
     <hr class="centered-thick-line" style="margin-top: 0.2rem;" />
+
     <h2>Education</h2>
-    <h2 class="small-heading">Doctor of Philosophy (Ph.D.) (2018-2025)</h2>
+    <h2 class="small-heading">Doctor of Philosophy (Ph.D.) (2018–2025)</h2>
+    <p><span class="dark-blue"><strong>Thesis:</strong> "Structure and Dynamics of Complex Liquids Inside Confined Environments."</span></p>
     <p>
-      <span class="dark-blue"> <strong>Thesis: </strong>"Structure and Dynamics of Complex Liquids Inside Confined Environments."</span>
-    </p>
-    <p>
-      <strong>Advisor:</strong> Dr. Sudip Chakraborty (Assistant Professor)
-      </p>
-    <p>
+      <strong>Advisor:</strong> Dr. Sudip Chakraborty (Assistant Professor)<br>
       Department of Computational Sciences <br>
-      Central University of Punjab <br>
-      Bathinda Rd, Ghudda, Punjab 151401 </br>
+      Central University of Punjab, Ghudda, Punjab 151401
     </p>
-    <h2 class="small-heading">Master of Science (2016-2018)</h2>
-    <p>
-       <strong>Specialization: </strong>Medicinal Chemistry
-      </p>
-    <p>
-      <span class="dark-blue"> <strong>Project: </strong>"In vitro and In silico study of Essential oil Components from Eucalyptus
-        tereticornis as Antibacterial Agents."</span>
-    </p>
-    <p>
-      <strong>Advisor:</strong> Dr. Vikas Jaitak
-      </p>
-    <p>
-      Department of Pharmaceutical Sciences <br>
-      Central University of Punjab <br>
-      Bathinda Rd, Ghudda, Punjab 151401 </br>
-    </p>
-        <h2 class="small-heading">Bachelor of Science (2013-2016)</h2>
-    <p>
-      <strong>Major: </strong>Chemistry (Hons.)
-      </p>  
-    <p>
-      Department of Chemistry, Shyam Lal College <br>
-      University of Delhi <br>
-      New Delhi, India </br>
-    </p>
+
+    <h2 class="small-heading">Master of Science (2016–2018)</h2>
+    <p><strong>Specialization:</strong> Medicinal Chemistry</p>
+    <p><span class="dark-blue"><strong>Project:</strong> "In vitro and In silico study of Essential oil Components from Eucalyptus
+        tereticornis as Antibacterial Agents."</span></p>
+    <p><strong>Advisor:</strong> Dr. Vikas Jaitak</p>
+    <p>Department of Pharmaceutical Sciences <br> Central University of Punjab, Ghudda, Punjab 151401</p>
+
+    <h2 class="small-heading">Bachelor of Science (2013–2016)</h2>
+    <p><strong>Major:</strong> Chemistry (Hons.)</p>
+    <p>Department of Chemistry, Shyam Lal College <br> University of Delhi, New Delhi</p>
+
     <hr class="centered-line" style="margin-bottom: 0.2rem;" />
     <hr class="centered-thick-line" style="margin-top: 0.2rem;" />
+
     <h2>Skills</h2>
-<table class="skills-table">
-  <tr>
-    <td>Operating System : </td>
-    <td>Linux and Windows </td>
-  </tr>
-  <tr>
-    <td>Programming and Scripting : </td>
-    <td>FORTRAN, Python, Bash, Tcl/Tk, awk </td>
-  </tr>
-  <tr>
-    <td>Molecular Modelling and system preparation : </td>
-    <td>GaussView, Avogadro, VMD, Pymol, Alphafold, Packmol </td>
-  </tr>
-  <tr>
-    <td>Simulation & Docking: </td>
-    <td>Gromacs, AMBER, NAMD, CHARMM-GUI, AutoDock Vina, ProteinX server, Schrodinger</td>
-  </tr>
-  <tr>
-    <td>Quantum Packages : </td>
-    <td>Gaussian, Psi4, Multiwfn</td>
-  </tr>
-  <tr>
-    <td>Writing, Image Processing and Plotting : </td>
-    <td>LaTeX, Microsoft office, Libreoffice, GIMP, Xmgrace, matplotlib </td>
-  </tr>
-    <tr>
-    <td>Web Technologies : </td>
-    <td>HTML, CSS</td>
-  </tr>
-  <tr>
-    <td>Languages : </td>
-    <td>Proficiency in English and Hindi</td>
-  </tr>
-</table>
+    <table class="skills-table">
+      <tr><td>Operating System:</td><td>Linux and Windows</td></tr>
+      <tr><td>Programming and Scripting:</td><td>FORTRAN, Python, Bash, Tcl/Tk, awk</td></tr>
+      <tr><td>Molecular Modelling and system preparation:</td><td>GaussView, Avogadro, VMD, Pymol, Alphafold, Packmol</td></tr>
+      <tr><td>Simulation & Docking:</td><td>Gromacs, AMBER, NAMD, CHARMM-GUI, AutoDock Vina, ProteinX server, Schrodinger</td></tr>
+      <tr><td>Quantum Packages:</td><td>Gaussian, Psi4, Multiwfn</td></tr>
+      <tr><td>Writing, Image Processing and Plotting:</td><td>LaTeX, Microsoft Office, LibreOffice, GIMP, Xmgrace, matplotlib</td></tr>
+      <tr><td>Web Technologies:</td><td>HTML, CSS</td></tr>
+      <tr><td>Languages:</td><td>Proficiency in English and Hindi</td></tr>
+    </table>
+
     <hr class="centered-line" style="margin-bottom: 0.2rem;" />
     <hr class="centered-thick-line" style="margin-top: 0.2rem;" />
+
     <h2>Awards and Fellowship</h2>
     <ul>
-      <li>
-        <strong>(CSIR-NET/JRF-2017,Dec)</strong>
-      </li>
-      <li>
-        Graduate Aptitude Test in Engineering (GATE-2018)
-      </li>
-      <li>
-        Common University Entrance Test (CUCET(Ph.D.))-2018
-      </li>
-      <li>
-        Common University Entrance Test (CUCET(Postgraduation))-2016
-      </li>      
+      <li><strong>CSIR-NET/JRF (Dec 2017)</strong></li>
+      <li>Graduate Aptitude Test in Engineering (GATE 2018)</li>
+      <li>Common University Entrance Test (CUCET Ph.D.) – 2018</li>
+      <li>Common University Entrance Test (CUCET PG) – 2016</li>
     </ul>
+
     <hr class="centered-line" style="margin-bottom: 0.2rem;" />
     <hr class="centered-thick-line" style="margin-top: 0.2rem;" />
+
     <h2>Research Interest</h2>
     <ul>
-      <li>
-        Statistical Mechanics, Multiscale Modeling and Simulations
-      </li>
-      <li>
-        Structural, Dynamic and Spectral Properties of Confined and Interfacial Liquids/Molecules
-      </li>
-      <li>
-        Catalysis
-      </li>
-      <li>
-        Intrinsically disordered proteins (IDP)
-      </li>
-      <li>
-        Lipids and Membrane Biophysics
-      </li>
-      
+      <li>Statistical Mechanics, Multiscale Modeling and Simulations</li>
+      <li>Structural, Dynamic and Spectral Properties of Confined and Interfacial Liquids/Molecules</li>
+      <li>Catalysis</li>
+      <li>Intrinsically Disordered Proteins (IDP)</li>
+      <li>Lipids and Membrane Biophysics</li>
     </ul>
-    
-    </div>
+  </div>
 
   <!-- Navigation -->
   <nav class="navigation">
