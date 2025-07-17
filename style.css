@@ -292,36 +292,47 @@ publication link
 Cover page in the background of publication
 ================================== */
 
-@keyframes move-bg {
-  from {
-    background-position: left top;
-  }
-  to {
-    background-position: right top;
-  }
-}
-
 body.publications-page {
-  background-image: 
-    linear-gradient(to right, rgba(240, 244, 248, 0) 0%, rgba(217, 226, 236, 1) 100%),
-    url('images/JPCB-coverpage.jpg'),
-    linear-gradient(to right, #f0f4f8, #d9e2ec); /* base gradient */
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: contain;
-  background-color: #d9e2ec;  /* fallback */
+  position: relative;
+  background: linear-gradient(to right, #f0f4f8, #d9e2ec);
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-.publication-container {
-  background-color: rgba(255, 255, 255, 0.6); /* translucent white */
-  backdrop-filter: blur(10px);                /* frosted-glass blur */
-  -webkit-backdrop-filter: blur(10px);        /* Safari support */
-  max-width: 1000px;
-  margin: 20px auto 3rem auto;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+/* Animated background layer */
+body.publications-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/JPCB-coverpage.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left top;
+  opacity: 1;
+  animation: moveAndFade 10s ease-out forwards;
+  z-index: 0;
+}
+
+/* Content stays above background */
+.publication-container,
+.top-bar {
+  position: relative;
+  z-index: 1;
+}
+
+/* Animation: slide image to the right and fade to 60% opacity */
+@keyframes moveAndFade {
+  0% {
+    background-position: left top;
+    opacity: 1;
+  }
+  100% {
+    background-position: right top;
+    opacity: 0.6;
+  }
 }
 
 /* Frosted glass only on publication page */
