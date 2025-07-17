@@ -321,3 +321,13 @@ body.publications-page {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.4);
 }
+
+/* Frosted glass only on publication page */
+.publications-page .top-bar {
+  background-color: rgba(204, 204, 204, 0.4); /* semi-transparent grey */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  z-index: 999;
+  position: relative;
+}
