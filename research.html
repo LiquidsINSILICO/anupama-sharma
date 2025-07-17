@@ -6,8 +6,45 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 40px;
+      margin: 0;
+      padding: 0;
       background: #f9f9f9;
+    }
+
+    /* Navigation bar */
+    nav.navigation {
+      background-color: #333;
+      padding: 12px 0;
+      text-align: center;
+    }
+
+    nav.navigation a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav.navigation a:hover {
+      text-decoration: underline;
+    }
+
+    /* Gray header bar */
+    .header-bar {
+      background-color: #e0e0e0;
+      color: #333;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 1.8em;
+      font-weight: bold;
+      border-bottom: 1px solid #ccc;
+    }
+
+    /* Content */
+    .content {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
 
     .project {
@@ -18,7 +55,7 @@
       padding: 20px;
       background: white;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
 
     .project-content {
@@ -51,51 +88,12 @@
     .poster-link:hover {
       background: #3867d6;
     }
-
-    nav.navigation {
-      text-align: center;
-      margin-top: 60px;
-    }
-
-    nav.navigation a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-    }
-
-    nav.navigation a:hover {
-      text-decoration: underline;
-    }
   </style>
 </head>
+
 <body>
 
-  <h1>Research</h1>
-
-  <!-- Project 1 -->
-  <div class="project">
-    <div class="project-content">
-      <h2>Water Dynamics in Confined Carbon Nanotubes</h2>
-      <p>This study explores how confinement inside carbon nanotubes alters the hydrogen bonding and diffusion properties of water using molecular dynamics simulations.</p>
-      <a class="poster-link" href="posters/water_confined_CNT.pdf" target="_blank">View Poster</a>
-    </div>
-    <img src="images/cnt-water.png" alt="Water in Carbon Nanotube">
-  </div>
-
-  <!-- Project 2 -->
-  <div class="project">
-    <div class="project-content">
-      <h2>Force Field Benchmarking for IDPs</h2>
-      <p>Evaluated 13 force fields for their ability to represent intrinsically disordered proteins (IDPs) in water using RMSD, Rg, and secondary structure metrics.</p>
-      <a class="poster-link" href="posters/idp_forcefield_benchmark.pdf" target="_blank">View Poster</a>
-    </div>
-    <img src="images/idp-benchmark.png" alt="IDP Benchmark">
-  </div>
-
-  <!-- Add more projects here -->
-
-  <!-- Navigation at bottom -->
+  <!-- Navigation at top -->
   <nav class="navigation">
     <a href="index.html">Home</a>
     <a href="about.html">About Me</a>
@@ -104,6 +102,35 @@
     <a href="resources.html">Resources</a>
     <a href="contact.html">Contact</a>
   </nav>
+
+  <!-- Gray Header Bar -->
+  <div class="header-bar">Research Work Details</div>
+
+  <div class="content">
+
+    <!-- Project 1 -->
+    <div class="project">
+      <div class="project-content">
+        <h2>Water Dynamics in Confined Carbon Nanotubes</h2>
+        <p>This study explores how confinement inside carbon nanotubes alters the hydrogen bonding and diffusion properties of water using molecular dynamics simulations.</p>
+        <a class="poster-link" href="posters/water_confined_CNT.pdf" target="_blank">View Poster</a>
+      </div>
+      <img src="images/cnt-water.png" alt="Water in Carbon Nanotube">
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project">
+      <div class="project-content">
+        <h2>Force Field Benchmarking for IDPs</h2>
+        <p>Evaluated 13 force fields for their ability to represent intrinsically disordered proteins (IDPs) in water using RMSD, Rg, and secondary structure metrics.</p>
+        <a class="poster-link" href="posters/idp_forcefield_benchmark.pdf" target="_blank">View Poster</a>
+      </div>
+      <img src="images/idp-benchmark.png" alt="IDP Benchmark">
+    </div>
+
+    <!-- Add more projects below as needed -->
+    
+  </div>
 
 </body>
 </html>
