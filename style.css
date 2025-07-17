@@ -338,7 +338,7 @@ body.publications-page::before {
   }
   100% {
     background-position: right top;
-    opacity: 0.6;
+    opacity: 0.4;
   }
 }
 
