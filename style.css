@@ -87,6 +87,10 @@ p {
   max-width: 90%;
 }
 
+.centered-text {
+  text-align: center;
+}
+
 /* ============================
    Social Media Icons
 ============================ */
