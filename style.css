@@ -172,8 +172,11 @@ p {
   padding-bottom: 6rem; /* ensures content doesn't clash with fixed nav */
   }
 
+/* Top grey bar that should touch nav */
 .top-bar {
   background-color: #ccc;
+  margin: 0;      /* Ensure no gap */
+  padding: 0;     /* Adjust if needed */
   width: 100%;
   }
 
