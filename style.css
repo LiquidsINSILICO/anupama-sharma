@@ -118,8 +118,8 @@ p {
   display: inline-block;
   padding: 10px 20px;
   margin-top: 1rem;
-  background-color: #0077b6;
-  color: white;
+  background-color: #0077b6;  /* Blue background */
+  color: white !important;    /* Force white text */
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
@@ -128,6 +128,7 @@ p {
 
 .cv-button:hover {
   background-color: #023e8a;
+  color: white !important;    /* Ensure it stays white on hover too */
 }
 
 /* ============================
