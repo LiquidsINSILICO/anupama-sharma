@@ -315,7 +315,7 @@ body.publications-page {
   backdrop-filter: blur(10px);                /* frosted-glass blur */
   -webkit-backdrop-filter: blur(10px);        /* Safari support */
   max-width: 1000px;
-  margin: 100px auto 3rem auto;
+  margin: 20px auto 3rem auto;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
