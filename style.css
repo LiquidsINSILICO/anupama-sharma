@@ -292,10 +292,21 @@ publication link
 Cover page in the background of publication
 ================================== */
 
+/* Publications page background with clean white content box */
 body.publications-page {
   background-image: url('images/JPCB-coverpage.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+/* White content box for publication list */
+.publication-container {
+  background-color: white;
+  max-width: 1000px;
+  margin: 100px auto 3rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
