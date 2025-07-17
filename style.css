@@ -303,7 +303,7 @@ Cover page in the background of publication
 
 body.publications-page {
   background-image: 
-    linear-gradient(to right, rgba(240, 244, 248, 0) 60%, rgba(217, 226, 236, 1) 100%),
+    linear-gradient(to right, rgba(240, 244, 248, 0) 0%, rgba(217, 226, 236, 1) 100%),
     url('images/JPCB-coverpage.jpg'),
     linear-gradient(to right, #f0f4f8, #d9e2ec); /* base gradient */
   background-repeat: no-repeat;
