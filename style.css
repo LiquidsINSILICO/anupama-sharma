@@ -293,12 +293,13 @@ Cover page in the background of publication
 ================================== */
 
 body.publications-page {
-  background-image: url('images/JPCB-coverpage.jpg');
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 1)),
+    url('images/JPCB-coverpage.jpg');
   background-repeat: no-repeat;
+  background-position: center top;
   background-size: contain;
   background-color: #f9f9f9;
-  background-position: 0% 0%;
-  animation: moveBackground 40s linear infinite;
 }
 
 @keyframes moveBackground {
