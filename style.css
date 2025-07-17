@@ -6,7 +6,7 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(to right, #f0f4f8, #d9e2ec);
   min-height: 100vh;
-/*  padding-top: 70px; */ /* spacing for fixed navbar */
+  padding-top: 70px; /* spacing for fixed navbar */
 }
 
 /* ============================
