@@ -253,3 +253,25 @@ publication link
   color: #0077b6;
   text-decoration: underline;
 }
+
+.publications-list {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding-left: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.publications-list li {
+  margin-bottom: 1.5rem;
+}
+
+.publications-list a {
+  text-decoration: none;
+  color: #003366;
+}
+
+.publications-list a:hover {
+  color: #0077b6;
+  text-decoration: underline;
+}
