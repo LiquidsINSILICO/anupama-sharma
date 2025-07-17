@@ -292,21 +292,32 @@ publication link
 Cover page in the background of publication
 ================================== */
 
-/* Publications page background with clean white content box */
 body.publications-page {
   background-image: url('images/JPCB-coverpage.jpg');
   background-repeat: no-repeat;
-  background-position: center top;
-  background-size: contain;  /* 👈 shows full image */
-  background-color: #f9f9f9;  /* fallback color */
+  background-size: contain;
+  background-color: #f9f9f9;
+  background-position: 0% 0%;
+  animation: moveBackground 40s linear infinite;
 }
 
-/* White content box for publication list */
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
 .publication-container {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6); /* translucent white */
+  backdrop-filter: blur(10px);                /* frosted-glass blur */
+  -webkit-backdrop-filter: blur(10px);        /* Safari support */
   max-width: 1000px;
   margin: 100px auto 3rem auto;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
