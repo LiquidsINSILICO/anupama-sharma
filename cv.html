@@ -5,59 +5,88 @@
   <title>CV – Anupama Sharma</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Header for CV page */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f0f4f8, #d9e2ec);
+      min-height: 100vh;
+    }
+
     .cv-header {
       text-align: center;
-      padding: 1rem;
+      padding: 1.5rem 1rem;
       background-color: white;
-      box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
       border-radius: 12px;
-      max-width: 400px;
-      width: 90%;
-      margin: 20px auto;
-      position: static !important; /* Force override absolute positioning */
-      top: auto !important;
-      left: auto !important;
-      transform: none !important;
-      max-height: none !important;
+      max-width: 500px;
+      margin: 30px auto 10px auto;
     }
-    
+
+    .cv-header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #0077b6;
+    }
+
+    .download-link {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .download-link a {
+      text-decoration: none;
+      color: #0077b6;
+      font-weight: bold;
+    }
+
     .pdf-container {
       width: 90%;
-      height: calc(100vh - 180px); /* Account for header and navigation */
-      margin: 20px auto;
-      margin-bottom: 80px; /* Space for navigation */
-      box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+      height: calc(100vh - 220px);
+      margin: 20px auto 80px auto;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
       border-radius: 12px;
       overflow: hidden;
+      background-color: white;
     }
-    
+
     iframe {
       width: 100%;
       height: 100%;
       border: none;
       border-radius: 12px;
     }
-    
-    /* Ensure body doesn't use centering for CV page */
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #f0f4f8, #d9e2ec);
-      min-height: 100vh;
-      position: relative;
+
+    nav.navigation {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #ffffff;
+      border-top: 1px solid #ccc;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    nav.navigation a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #0077b6;
+      font-weight: bold;
+      font-size: 1.1em;
     }
   </style>
 </head>
 <body>
   <div class="cv-header">
     <h1>Curriculum Vitae</h1>
+    <div class="download-link">
+      <a href="cv/Anupama_CV-updated.pdf" download>Download PDF</a>
+    </div>
   </div>
-  
+
   <div class="pdf-container">
     <iframe src="cv/Anupama_CV-updated.pdf"></iframe>
   </div>
-  
+
   <nav class="navigation">
     <a href="index.html">Home</a>
     <a href="about.html">About Me</a>
