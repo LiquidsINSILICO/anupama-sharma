@@ -1,11 +1,109 @@
-<!DOCTYPE html><html><head><title>Research</title><link rel='stylesheet' href='style.css'></head><body><h1>Research</h1><p>Research content here...</p>
-      <!-- Navigation at bottom -->
-      <nav class="navigation">
-      <a href="index.html">Home</a>
-      <a href="about.html">About Me</a>
-      <a href="research.html">Research</a>
-      <a href="publications.html">Publications</a>
-      <a href="resources.html">Resources</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-</body></html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Research</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background: #f9f9f9;
+    }
+
+    .project {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .project-content {
+      flex: 1;
+      padding-right: 20px;
+    }
+
+    .project-content h2 {
+      margin-top: 0;
+    }
+
+    .project img {
+      width: 300px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .poster-link {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 12px;
+      background: #4b7bec;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    .poster-link:hover {
+      background: #3867d6;
+    }
+
+    nav.navigation {
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    nav.navigation a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    nav.navigation a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Research</h1>
+
+  <!-- Project 1 -->
+  <div class="project">
+    <div class="project-content">
+      <h2>Water Dynamics in Confined Carbon Nanotubes</h2>
+      <p>This study explores how confinement inside carbon nanotubes alters the hydrogen bonding and diffusion properties of water using molecular dynamics simulations.</p>
+      <a class="poster-link" href="posters/water_confined_CNT.pdf" target="_blank">View Poster</a>
+    </div>
+    <img src="images/cnt-water.png" alt="Water in Carbon Nanotube">
+  </div>
+
+  <!-- Project 2 -->
+  <div class="project">
+    <div class="project-content">
+      <h2>Force Field Benchmarking for IDPs</h2>
+      <p>Evaluated 13 force fields for their ability to represent intrinsically disordered proteins (IDPs) in water using RMSD, Rg, and secondary structure metrics.</p>
+      <a class="poster-link" href="posters/idp_forcefield_benchmark.pdf" target="_blank">View Poster</a>
+    </div>
+    <img src="images/idp-benchmark.png" alt="IDP Benchmark">
+  </div>
+
+  <!-- Add more projects here -->
+
+  <!-- Navigation at bottom -->
+  <nav class="navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="research.html">Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="resources.html">Resources</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+</body>
+</html>
