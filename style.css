@@ -275,3 +275,14 @@ publication link
   color: #0077b6;
   text-decoration: underline;
 }
+
+.cover-link {
+  font-size: 0.95rem;
+  color: #0077b6;
+  text-decoration: underline;
+  display: inline-block;
+  margin-top: 5px;
+}
+.cover-link:hover {
+  color: #023e8a;
+}
