@@ -162,3 +162,51 @@ p {
 .skills-table td:last-child {
   text-align: left;
 }
+
+/* style used in about.html file */
+
+.about-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-bottom: 6rem; /* ensures content doesn't clash with fixed nav */
+  }
+
+.top-bar {
+  background-color: #ccc;
+  width: 100%;
+  }
+
+.top-bar-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #333;
+  text-align: left;
+  }
+
+    .nested-list {
+      margin-left: 1.5rem;
+    }
+
+    h2 {
+      color: #0077b6;
+      margin-top: 2rem;
+    }
+
+    ul, p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+/* style used in about.html file */
+
+
+
