@@ -295,10 +295,10 @@ Cover page in the background of publication
 /* Publications page background with clean white content box */
 body.publications-page {
   background-image: url('images/JPCB-coverpage.jpg');
-  background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-position: center top;
+  background-size: contain;  /* 👈 shows full image */
+  background-color: #f9f9f9;  /* fallback color */
 }
 
 /* White content box for publication list */
