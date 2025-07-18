@@ -406,7 +406,3 @@ body.publications-page::before {
 .poster-link:hover {
   background: #3867d6;
 }
-
-.content {
-  margin-top: 30px; /* Adjust this value as needed */
-}
