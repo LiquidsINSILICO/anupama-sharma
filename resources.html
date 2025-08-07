@@ -1,41 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Resources</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>Resources</h1>
+  <!-- Navigation at top -->
+  <nav class="navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="research.html">Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="resources.html">Resources</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-  <div class="resource-block" id="tools">
-    <h2>&#128736; Computational Tools</h2>
-    <ul>
-      <li>GROMACS</li>
-      <li>Gaussian</li>
-      <li>VMD</li>
-      <li>NAMD</li>
-      <li>HADDOCK</li>
-    </ul>
+  <!-- Gray Header Bar -->
+  <div class="top-bar">
+    <div class="top-bar-inner">Resources & Tutorials</div>
   </div>
 
-  <div class="resource-block" id="tutorials">
-    <h2>&#128216; Tutorials & Codes</h2>
-    <ul>
-      <li><a href="posters/umbrella_sampling.pdf">Umbrella Sampling Code</a></li>
-      <li><a href="posters/dipole_calc.py">Dipole Moment Calculation</a></li>
-      <!-- Add more tutorials here -->
-    </ul>
-  </div>
+  <div class="research-content">
+    
+    <!-- Computational Tools Block -->
+    <div class="resource-block" id="tools">
+      <h2>&#128736; Computational Tools</h2>
+      <ul>
+        <li>GROMACS</li>
+        <li>Gaussian</li>
+        <li>VMD</li>
+        <li>NAMD</li>
+        <li>HADDOCK</li>
+      </ul>
+    </div>
 
-  <div class="resource-block" id="tricks">
-    <h2>&#128161; Tips & Tricks from Me</h2>
-    <ul>
-      <li>How to restart Gaussian from checkpoint</li>
-      <li>Quick GROMACS RMSD analysis</li>
-      <li>Extracting water around protein using VMD</li>
-      <!-- Add more tips -->
-    </ul>
+    <!-- Tutorials Block -->
+    <div class="resource-block" id="tutorials">
+      <h2>&#128216; Tutorials & Codes</h2>
+      <ul>
+        <li><a href="posters/umbrella_sampling.pdf" target="_blank">Umbrella Sampling Code</a></li>
+        <li><a href="posters/dipole_calc.py" target="_blank">Dipole Moment Calculation</a></li>
+        <!-- Add more tutorials here -->
+      </ul>
+    </div>
+
+    <!-- Tricks Block -->
+    <div class="resource-block" id="tricks">
+      <h2>&#128161; Tips & Tricks from Me</h2>
+      <ul>
+        <li>How to restart Gaussian from checkpoint</li>
+        <li>Quick GROMACS RMSD analysis</li>
+        <li>Extracting water around protein using VMD</li>
+        <!-- Add more tips -->
+      </ul>
+    </div>
+
   </div>
 
 </body>
