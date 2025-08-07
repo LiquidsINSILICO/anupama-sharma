@@ -411,6 +411,21 @@ body.publications-page::before {
    Resources Project Sections
 ============================ */
 
+.top-bar {
+  background-color: #e0e0e0;
+  padding: 15px 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.4em;
+  color: #333;
+  margin-top: 60px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.research-content {
+  padding: 40px 10%;
+}
+
 .resource-block {
   background-color: #f5f5f5;
   padding: 20px;
