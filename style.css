@@ -406,3 +406,36 @@ body.publications-page::before {
 .poster-link:hover {
   background: #3867d6;
 }
+
+/* ============================
+   Resources Project Sections
+============================ */
+
+.resource-block {
+  background-color: #f5f5f5;
+  padding: 20px;
+  margin: 30px 0;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.resource-block h2 {
+  color: #2c3e50;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.resource-block ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.resource-block a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.resource-block a:hover {
+  text-decoration: underline;
+}
