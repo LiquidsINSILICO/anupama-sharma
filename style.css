@@ -454,3 +454,18 @@ body.publications-page::before {
 .resource-block a:hover {
   text-decoration: underline;
 }
+
+/* ============================
+============================ */
+
+details summary {
+    cursor: pointer;
+    list-style: none;
+    margin: 0;
+}
+details[open] summary {
+    margin-bottom: 0;
+}
+pre {
+    margin-top: 0;
+}
