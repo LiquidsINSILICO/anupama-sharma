@@ -459,35 +459,47 @@ body.publications-page::before {
    Resource Section Expand/Collapse
 ============================ */
 
-/* Summary (expand/collapse heading) */
+/* Ensure all <li> and <summary> align perfectly */
+.resource-block ul {
+  padding-left: 1.2em;   /* indent for all list items */
+  margin: 0;
+}
+
+.resource-block ul li {
+  margin-bottom: 0.8em;  /* same spacing between items */
+  font-size: 1em;        /* match font size */
+  font-weight: normal;
+  list-style: disc;       /* normal bullet */
+}
+
+.resource-block details {
+  margin: 0;              /* remove extra margin from <details> */
+}
+
 .resource-block details summary {
+  list-style: none;       /* remove default marker */
+  margin: 0;
+  padding: 0;
   cursor: pointer;
-  font-size: 1em;        /* same size as list items */
-  font-weight: normal;    /* match list text weight */
-  color: #333;
-  list-style: none;       /* remove default bullets */
-  background: none;       /* remove box */
-  border: none;           /* remove border */
-  padding: 0;             /* remove padding */
-  margin-left: 1.2em;     /* same indentation as <li> */
-  display: list-item;     /* align with other list items */
+  display: list-item;     /* aligns with <li> */
+  font-weight: normal;
+  font-size: 1em;
 }
 
-/* Remove default arrow */
 .resource-block details summary::-webkit-details-marker {
-  display: none;          /* removes arrow in Chrome/Safari */
+  display: none;          /* remove browser arrow */
 }
 
-/* Collapsible content box */
 .resource-block details .exp-data-box {
-  display: none;          /* hidden by default */
+  display: none;
   background-color: #fff;
-  padding: 15px;
-  margin-top: 8px;
-  border-radius: 8px;
-  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+  padding: 12px;
+  margin-top: 4px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .resource-block details[open] .exp-data-box {
-  display: block;         /* visible when open */
+  display: block;
 }
+
