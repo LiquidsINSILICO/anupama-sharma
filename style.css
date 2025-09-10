@@ -459,44 +459,27 @@ body.publications-page::before {
    Resource Section Expand/Collapse
 ============================ */
 
-/* Ensure all <li> and <summary> align perfectly */
-.resource-block ul {
-  padding-left: 1.2em;   /* indent for all list items */
-  margin: 0;
-}
-
-.resource-block ul li {
-  margin-bottom: 0.8em;  /* same spacing between items */
-  font-size: 1em;        /* match font size */
-  font-weight: normal;
-  list-style: disc;       /* normal bullet */
-}
-
-.resource-block details {
-  margin: 0;              /* remove extra margin from <details> */
-}
-
 .resource-block details summary {
-  list-style: none;       /* remove default marker */
+  list-style: none;      /* remove any dot */
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: normal;
   margin: 0;
   padding: 0;
-  cursor: pointer;
-  display: list-item;     /* aligns with <li> */
-  font-weight: normal;
-  font-size: 1em;
+  display: list-item;    /* aligns with <li> */
 }
 
 .resource-block details summary::-webkit-details-marker {
-  display: none;          /* remove browser arrow */
+  display: none;         /* remove browser arrow */
 }
 
 .resource-block details .exp-data-box {
   display: none;
   background-color: #fff;
-  padding: 12px;
-  margin-top: 4px;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 15px;
+  margin-top: 8px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
 }
 
 .resource-block details[open] .exp-data-box {
