@@ -480,17 +480,23 @@ body.publications-page::before {
 /* ============================
 ============================ */
 
-/* Style the clickable summary */
+/* Make summary (the heading) look clickable */
 details summary {
   cursor: pointer;
   font-weight: bold;
   padding: 8px;
   border-radius: 5px;
   display: inline-block;
+  background: #f5f5f5;
 }
 
-/* White box for content */
-.exp-data-box {
+/* White box only appears when details is open */
+details .exp-data-box {
+  display: none;
+}
+
+details[open] .exp-data-box {
+  display: block;
   background-color: #fff;
   padding: 15px;
   margin-top: 10px;
@@ -515,4 +521,3 @@ details summary {
 .exp-data-box a:hover {
   text-decoration: underline;
 }
-
