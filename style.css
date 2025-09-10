@@ -459,39 +459,31 @@ body.publications-page::before {
    Resource Section Expand/Collapse
 ============================ */
 
-/* Style summary (heading only) */
+/* Summary (expand/collapse heading) */
 .resource-block details summary {
   cursor: pointer;
-  font-weight: bold;
+  font-size: 1em;        /* same size as list items */
+  font-weight: normal;   /* match list text weight */
   color: #333;
-  list-style: none;
-  background: none;   /* remove background box */
-  border: none;       /* remove border */
-  padding: 0;         /* remove extra padding */
-  margin: 0;          /* remove margin */
-  box-shadow: none;   /* remove shadow */
-  display: inline;    /* makes it look like plain text */
+  list-style: none;      /* remove default bullets */
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0 0 0 1.2em;   /* indent same as <li> */
+  box-shadow: none;
+  display: list-item;    /* keeps spacing consistent with <li> */
 }
 
-/* Remove default arrow */
+/* Remove browser's default arrow marker */
 .resource-block details summary::-webkit-details-marker {
   display: none;
-}
-
-/* Custom arrow (▶ closed, ▼ open) */
-.resource-block details summary::before {
-  content: "▶ ";
-  font-size: 0.9em;
-  margin-right: 5px;
-}
-.resource-block details[open] summary::before {
-  content: "▼ ";
 }
 
 /* Collapsible content box (only opens on click) */
 .resource-block details .exp-data-box {
   display: none;
 }
+
 .resource-block details[open] .exp-data-box {
   display: block;
   background-color: #fff;
@@ -499,19 +491,4 @@ body.publications-page::before {
   margin-top: 8px;
   border-radius: 8px;
   box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
-}
-
-/* Make summary look like list items */
-details summary {
-  cursor: pointer;
-  font-size: 1em;         /* same size as list items */
-  font-weight: normal;    /* match li text weight */
-  margin-left: 1.2em;     /* indent same as <li> */
-  list-style: none;       /* remove bullet */
-  display: list-item;     /* behave like li */
-}
-
-/* Remove extra arrow/dot style */
-details summary::-webkit-details-marker {
-  display: none;
 }
