@@ -456,46 +456,40 @@ body.publications-page::before {
 }
 
 /* ============================
+   Resource Section Expand/Collapse
 ============================ */
 
-#tricks details summary {
-  list-style: disc;
-  cursor: pointer;
-  font-size: 1em;
-  color: inherit;
-}
-
-#tricks details {
-  margin-left: 1.5em;
-}
-
-#tricks details summary::-webkit-details-marker {
-  display: none; /* hides default arrow */
-}
-
-#tricks details summary::before {
-  content: "• "; /* adds bullet like <li> */
-}
-
-/* ============================
-============================ */
-
-/* Make summary (the heading) look clickable */
-details summary {
+/* Style for all <summary> headings inside resource blocks */
+.resource-block details summary {
   cursor: pointer;
   font-weight: bold;
-  padding: 8px;
+  padding: 10px;
   border-radius: 5px;
-  display: inline-block;
   background: #f5f5f5;
+  color: #333;
+  display: inline-block;
+  list-style: none; /* prevent bullets */
 }
 
-/* White box only appears when details is open */
-details .exp-data-box {
+/* Remove the default marker and style the arrow consistently */
+.resource-block details summary::-webkit-details-marker {
+  display: none;
+}
+.resource-block details summary::before {
+  content: "▶ ";  /* closed arrow */
+  font-size: 0.9em;
+  margin-right: 5px;
+}
+.resource-block details[open] summary::before {
+  content: "▼ ";  /* open arrow */
+}
+
+/* Content box only appears when details is open */
+.resource-block details .exp-data-box {
   display: none;
 }
 
-details[open] .exp-data-box {
+.resource-block details[open] .exp-data-box {
   display: block;
   background-color: #fff;
   padding: 15px;
@@ -504,9 +498,11 @@ details[open] .exp-data-box {
   box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
 }
 
+/* Inner list formatting */
 .exp-data-box ul {
   list-style: none;
   padding-left: 0;
+  margin: 0;
 }
 
 .exp-data-box li {
