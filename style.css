@@ -463,32 +463,31 @@ body.publications-page::before {
 .resource-block details summary {
   cursor: pointer;
   font-size: 1em;        /* same size as list items */
-  font-weight: normal;   /* match list text weight */
+  font-weight: normal;    /* match list text weight */
   color: #333;
-  list-style: none;      /* remove default bullets */
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0 0 0 1.2em;   /* indent same as <li> */
-  box-shadow: none;
-  display: list-item;    /* keeps spacing consistent with <li> */
+  list-style: none;       /* remove default bullets */
+  background: none;       /* remove box */
+  border: none;           /* remove border */
+  padding: 0;             /* remove padding */
+  margin-left: 1.2em;     /* same indentation as <li> */
+  display: list-item;     /* align with other list items */
 }
 
-/* Remove browser's default arrow marker */
+/* Remove default arrow */
 .resource-block details summary::-webkit-details-marker {
-  display: none;
+  display: none;          /* removes arrow in Chrome/Safari */
 }
 
-/* Collapsible content box (only opens on click) */
+/* Collapsible content box */
 .resource-block details .exp-data-box {
-  display: none;
-}
-
-.resource-block details[open] .exp-data-box {
-  display: block;
+  display: none;          /* hidden by default */
   background-color: #fff;
   padding: 15px;
   margin-top: 8px;
   border-radius: 8px;
   box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+}
+
+.resource-block details[open] .exp-data-box {
+  display: block;         /* visible when open */
 }
