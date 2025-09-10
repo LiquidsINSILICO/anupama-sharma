@@ -4,6 +4,39 @@
   <meta charset="UTF-8">
   <title>Resources</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Collapsible style */
+    details summary {
+      cursor: pointer;
+      font-size: 1em;
+      font-weight: bold;
+      padding: 0.3em 0;
+    }
+
+    /* Remove default arrow for WebKit */
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    /* Optional: add custom arrow */
+    details[open] summary::after {
+      content: " ▲";
+      font-size: 0.8em;
+    }
+    details:not([open]) summary::after {
+      content: " ▼";
+      font-size: 0.8em;
+    }
+
+    /* Box only for opened content */
+    .exp-data-box {
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 0.8em;
+      margin-top: 0.5em;
+      border-radius: 4px;
+    }
+  </style>
 </head>
 <body>
 
@@ -33,7 +66,6 @@
         <li>VMD</li>
         <li>NAMD</li>
         <li>HADDOCK</li>
-    <!-- Add more tutorials here -->
       </ul>
     </div>
 
@@ -53,53 +85,50 @@
         </li>
         <li><a href="posters/umbrella_sampling.pdf" target="_blank">Umbrella Sampling Code</a></li>
         <li><a href="posters/dipole_calc.py" target="_blank">Dipole Moment Calculation</a></li>
-        <!-- Add more tutorials here -->
       </ul>
     </div>
 
-<!-- Tricks Block -->
-<div class="resource-block" id="tricks">
-  <h2>&#128161; Tips & Tricks from Me</h2>
-  <ul>
-    <li>
-      <a href="https://github.com/LiquidsINSILICO/CNT-ILs-simulation-codes/tree/main" target="_blank">
-        CNT Dispersion in Ionic Liquids: Simulation Codes and Tutorials
-      </a>
-    </li>
-  </ul>
+    <!-- Tricks Block -->
+    <div class="resource-block" id="tricks">
+      <h2>&#128161; Tips & Tricks from Me</h2>
+      <ul>
+        <li>
+          <a href="https://github.com/LiquidsINSILICO/CNT-ILs-simulation-codes/tree/main" target="_blank">
+            CNT Dispersion in Ionic Liquids: Simulation Codes and Tutorials
+          </a>
+        </li>
+      </ul>
 
-  <!-- Miniconda installation collapsible -->
-  <details>
-    <summary>Miniconda Installation</summary>
-    <div class="exp-data-box">
-      <pre>
+      <!-- Miniconda installation collapsible -->
+      <details>
+        <summary>Miniconda Installation</summary>
+        <div class="exp-data-box">
+          <pre>
 mkdir -p ~/miniconda3
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
 bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
 rm ~/miniconda3/miniconda.sh
-      </pre>
-    </div>
-  </details>
+          </pre>
+        </div>
+      </details>
 
-  <!-- Experimental Data collapsible -->
-  <details>
-    <summary>Experimental Data Resources</summary>
-    <div class="exp-data-box">
+      <!-- Experimental Data collapsible -->
+      <details>
+        <summary>Experimental Data Resources</summary>
+        <div class="exp-data-box">
+          <ul>
+            <li><a href="https://www.rcsb.org/" target="_blank">Protein Data Bank (PDB)</a></li>
+            <li><a href="https://bmrb.io/" target="_blank">BMRB – NMR Data</a></li>
+            <li><a href="https://www.uniprot.org/" target="_blank">UniProt – Protein Sequences</a></li>
+            <li><a href="https://www.ebi.ac.uk/pdbe/emdb/" target="_blank">EMDB – Electron Microscopy Maps</a></li>
+            <li><a href="https://proteomecentral.proteomexchange.org/" target="_blank">ProteomeXchange – Proteomics</a></li>
+            <li><a href="https://www.sasbdb.org/" target="_blank">SASBDB – SAXS Data</a></li>
+          </ul>
+        </div>
+      </details>
+
       <ul>
-        <li><a href="https://www.rcsb.org/" target="_blank">Protein Data Bank (PDB)</a></li>
-        <li><a href="https://bmrb.io/" target="_blank">BMRB – NMR Data</a></li>
-        <li><a href="https://www.uniprot.org/" target="_blank">UniProt – Protein Sequences</a></li>
-        <li><a href="https://www.ebi.ac.uk/pdbe/emdb/" target="_blank">EMDB – Electron Microscopy Maps</a></li>
-        <li><a href="https://proteomecentral.proteomexchange.org/" target="_blank">ProteomeXchange – Proteomics</a></li>
-        <li><a href="https://www.sasbdb.org/" target="_blank">SASBDB – SAXS Data</a></li>
-      </ul>
-    </div>
-  </details>
-
-        
-    <!-- Add more tips here -->
         <li>Extracting water around protein using VMD</li>
-        <!-- Add more tips -->
       </ul>
     </div>
 
