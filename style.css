@@ -459,61 +459,59 @@ body.publications-page::before {
    Resource Section Expand/Collapse
 ============================ */
 
-/* Style for all <summary> headings inside resource blocks */
+/* Style for summary (heading) */
 .resource-block details summary {
   cursor: pointer;
   font-weight: bold;
-  padding: 10px;
-  border-radius: 5px;
-  background: #f5f5f5;
+  padding: 5px 0;
   color: #333;
+  list-style: none;
   display: inline-block;
-  list-style: none; /* prevent bullets */
+  background: none;     /* remove gray box */
+  border: none;         /* remove border */
 }
 
-/* Remove the default marker and style the arrow consistently */
+/* Remove default marker */
 .resource-block details summary::-webkit-details-marker {
   display: none;
 }
+
+/* Add arrow (▶ closed, ▼ open) */
 .resource-block details summary::before {
-  content: "▶ ";  /* closed arrow */
+  content: "▶ ";
   font-size: 0.9em;
   margin-right: 5px;
 }
 .resource-block details[open] summary::before {
-  content: "▼ ";  /* open arrow */
+  content: "▼ ";
 }
 
-/* Content box only appears when details is open */
+/* Collapsible content box */
 .resource-block details .exp-data-box {
   display: none;
 }
-
 .resource-block details[open] .exp-data-box {
   display: block;
   background-color: #fff;
   padding: 15px;
-  margin-top: 10px;
+  margin-top: 8px;
   border-radius: 8px;
   box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
 }
 
-/* Inner list formatting */
+/* Links inside */
 .exp-data-box ul {
   list-style: none;
   padding-left: 0;
   margin: 0;
 }
-
 .exp-data-box li {
   margin: 8px 0;
 }
-
 .exp-data-box a {
   color: #0066cc;
   text-decoration: none;
 }
-
 .exp-data-box a:hover {
   text-decoration: underline;
 }
