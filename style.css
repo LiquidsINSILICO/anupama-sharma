@@ -459,24 +459,26 @@ body.publications-page::before {
    Resource Section Expand/Collapse
 ============================ */
 
-/* Style for summary (heading) */
+/* Style summary (heading only) */
 .resource-block details summary {
   cursor: pointer;
   font-weight: bold;
-  padding: 5px 0;
   color: #333;
   list-style: none;
-  display: inline-block;
-  background: none;     /* remove gray box */
-  border: none;         /* remove border */
+  background: none;   /* remove background box */
+  border: none;       /* remove border */
+  padding: 0;         /* remove extra padding */
+  margin: 0;          /* remove margin */
+  box-shadow: none;   /* remove shadow */
+  display: inline;    /* makes it look like plain text */
 }
 
-/* Remove default marker */
+/* Remove default arrow */
 .resource-block details summary::-webkit-details-marker {
   display: none;
 }
 
-/* Add arrow (▶ closed, ▼ open) */
+/* Custom arrow (▶ closed, ▼ open) */
 .resource-block details summary::before {
   content: "▶ ";
   font-size: 0.9em;
@@ -486,7 +488,7 @@ body.publications-page::before {
   content: "▼ ";
 }
 
-/* Collapsible content box */
+/* Collapsible content box (only opens on click) */
 .resource-block details .exp-data-box {
   display: none;
 }
@@ -497,21 +499,4 @@ body.publications-page::before {
   margin-top: 8px;
   border-radius: 8px;
   box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
-}
-
-/* Links inside */
-.exp-data-box ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-.exp-data-box li {
-  margin: 8px 0;
-}
-.exp-data-box a {
-  color: #0066cc;
-  text-decoration: none;
-}
-.exp-data-box a:hover {
-  text-decoration: underline;
 }
