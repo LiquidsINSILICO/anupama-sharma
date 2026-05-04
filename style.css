@@ -674,3 +674,8 @@ body:not(.home-page) {
 .lightbox-content {
   transition: opacity 0.4s ease;
 }
+
+.timeline-item {
+  opacity: 1 !important;
+  transform: none !important;
+}
