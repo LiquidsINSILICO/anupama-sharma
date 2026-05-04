@@ -344,3 +344,31 @@ p {
     left: 20px;
   }
 }
+
+/* ============================
+   RESPONSIVE gallery
+============================ */
+
+.timeline-card img.active {
+  transform: scale(1.05);
+}
+
+.timeline-card img.left-1 {
+  transform: translateX(-20px) scale(0.95);
+  opacity: 0.8;
+}
+
+.timeline-card img.left-2 {
+  transform: translateX(-40px) scale(0.9);
+  opacity: 0.6;
+}
+
+.timeline-card img.right-1 {
+  transform: translateX(20px) scale(0.95);
+  opacity: 0.8;
+}
+
+.timeline-card img.right-2 {
+  transform: translateX(40px) scale(0.9);
+  opacity: 0.6;
+}
