@@ -4,7 +4,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #f0f4f8, #d9e2ec);
+  background: none;
   min-height: 100vh;
   padding-top: 70px; /* spacing for fixed navbar */
 }
@@ -638,4 +638,22 @@ body {
   .timeline-dot {
     left: 20px;
   }
+}
+
+body {
+  background-image: url("images/sakura.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(245, 247, 251, 0.85);
+  z-index: -1;
 }
