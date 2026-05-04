@@ -661,3 +661,11 @@ body.home-page::before {
   background: rgba(255, 255, 255, 0.35); /* reduce opacity */
   z-index: -1;
 }
+
+body:not(.home-page) {
+  background: linear-gradient(to right, #f0f4f8, #d9e2ec);
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.95);
+}
