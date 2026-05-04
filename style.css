@@ -4,7 +4,6 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: none;
   min-height: 100vh;
   padding-top: 70px; /* spacing for fixed navbar */
 }
@@ -487,6 +486,10 @@ body.publications-page::before {
 }
 
 /* ===== BASIC RESET ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 
 /* ===== NAVIGATION ===== */
 .navigation {
@@ -633,24 +636,6 @@ body.publications-page::before {
   .timeline-dot {
     left: 20px;
   }
-}
-
-body {
-  background-image: url("images/sakura.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(245, 247, 251, 0.85);
-  z-index: -1;
 }
 
 /* ============================
