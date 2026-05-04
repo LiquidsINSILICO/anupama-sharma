@@ -23,16 +23,27 @@
   <div class="top-bar-inner">Gallery</div>
 </div>
 
-<!-- ============================
-     TIMELINE
-============================ -->
+<!-- TIMELINE -->
 <div class="timeline">
 
-  <!-- Hitachi -->
+  <!-- Workshop -->
   <div class="timeline-item right">
     <div class="timeline-dot"></div>
     <div class="timeline-card">
-      <img src="images/260502102631012.JPG">
+      <img src="images/workshop.jpg" alt="Workshop">
+      <div>
+        <span class="timeline-date">April 25, 2026</span>
+        <h3>Japan–Thai Workshop</h3>
+        <p>Presented research work.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hitachi -->
+  <div class="timeline-item left">
+    <div class="timeline-dot"></div>
+    <div class="timeline-card">
+      <img src="images/hitachi.jpg" alt="Hitachi Seaside Park">
       <div>
         <span class="timeline-date">April 2, 2026</span>
         <h3>Hitachi Seaside Park</h3>
@@ -42,10 +53,10 @@
   </div>
 
   <!-- Trek -->
-  <div class="timeline-item left">
+  <div class="timeline-item right">
     <div class="timeline-dot"></div>
     <div class="timeline-card">
-      <img src="images/trek.jpg">
+      <img src="images/trek.jpg" alt="Trekking">
       <div>
         <span class="timeline-date">March 21, 2026</span>
         <h3>Trekking</h3>
@@ -54,50 +65,11 @@
     </div>
   </div>
 
-  <!-- ML4Sci -->
-  <div class="timeline-item right">
-    <div class="timeline-dot"></div>
-    <div class="timeline-card">
-      <img src="images/ML4SCi.jpg">
-      <div>
-        <span class="timeline-date">2025</span>
-        <h3>ML4Sci Winter School</h3>
-        <p>Winning team (coding challenge).</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- MCBR -->
-  <div class="timeline-item left">
-    <div class="timeline-dot"></div>
-    <div class="timeline-card">
-      <img src="images/mcbr.jpg">
-      <div>
-        <span class="timeline-date">Dec 2025</span>
-        <h3>MCBR Conference</h3>
-        <p>Best Poster Award.</p>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Workshop -->
-  <div class="timeline-item right">
-    <div class="timeline-dot"></div>
-    <div class="timeline-card">
-      <img src="images/workshop.jpg">
-      <div>
-        <span class="timeline-date">April 25, 2026</span>
-        <h3>Japan–Thai Workshop</h3>
-        <p>Presented research work.</p>
-      </div>
-    </div>
-  </div>
-
   <!-- Joined Lab -->
   <div class="timeline-item left">
     <div class="timeline-dot"></div>
     <div class="timeline-card">
-      <img src="images/lab.jpg">
+      <img src="images/lab.jpg" alt="Shigeta Lab">
       <div>
         <span class="timeline-date">March 3, 2026</span>
         <h3>Joined Shigeta Lab</h3>
@@ -110,7 +82,7 @@
   <div class="timeline-item right">
     <div class="timeline-dot"></div>
     <div class="timeline-card">
-      <img src="images/lotus.jpg">
+      <img src="images/lotus.jpg" alt="LOTUS Fellowship">
       <div>
         <span class="timeline-date">2026</span>
         <h3>LOTUS Fellowship</h3>
@@ -118,12 +90,38 @@
       </div>
     </div>
   </div>
-  
+
+  <!-- MCBR -->
+  <div class="timeline-item left">
+    <div class="timeline-dot"></div>
+    <div class="timeline-card">
+      <img src="images/mcbr.jpg" alt="MCBR Conference">
+      <div>
+        <span class="timeline-date">Dec 2025</span>
+        <h3>MCBR Conference</h3>
+        <p>Best Poster Award.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ML4Sci -->
+  <div class="timeline-item right">
+    <div class="timeline-dot"></div>
+    <div class="timeline-card">
+      <img src="images/ml4sci.jpg" alt="ML4Sci">
+      <div>
+        <span class="timeline-date">2025</span>
+        <h3>ML4Sci Winter School</h3>
+        <p>Winning team (coding challenge).</p>
+      </div>
+    </div>
+  </div>
+
   <!-- PhD -->
   <div class="timeline-item left">
     <div class="timeline-dot"></div>
     <div class="timeline-card">
-      <img src="images/Ph.D.jpg">
+      <img src="images/phd.jpg" alt="PhD">
       <div>
         <span class="timeline-date">Ph.D Awarded</span>
         <h3>Doctor of Philosophy</h3>
@@ -140,9 +138,8 @@
   <img id="lightbox-img" class="lightbox-content">
 </div>
 
-<!-- JS -->
 <script>
-/* Lightbox */
+/* LIGHTBOX */
 const images = document.querySelectorAll(".timeline-card img");
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
@@ -158,7 +155,13 @@ document.querySelector(".close").onclick = () => {
   lightbox.style.display = "none";
 };
 
-/* Scroll animation */
+lightbox.onclick = (e) => {
+  if (e.target === lightbox) {
+    lightbox.style.display = "none";
+  }
+};
+
+/* SCROLL ANIMATION */
 const items = document.querySelectorAll(".timeline-item");
 
 const observer = new IntersectionObserver(entries => {
@@ -167,7 +170,7 @@ const observer = new IntersectionObserver(entries => {
       entry.target.classList.add("show");
     }
   });
-});
+}, { threshold: 0.2 });
 
 items.forEach(item => observer.observe(item));
 </script>
