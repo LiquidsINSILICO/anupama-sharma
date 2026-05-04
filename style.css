@@ -643,13 +643,14 @@ body {
 ============================ */
 
 body.home-page {
+  margin: 0;
   background-image: url("images/sakura.JPG");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
-/* Soft overlay for readability */
+/* transparent overlay */
 body.home-page::before {
   content: "";
   position: fixed;
@@ -657,6 +658,6 @@ body.home-page::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(245, 247, 251, 0.82);
+  background: rgba(255, 255, 255, 0.35); /* reduce opacity */
   z-index: -1;
 }
