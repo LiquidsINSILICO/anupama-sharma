@@ -26,131 +26,107 @@
 <!-- TIMELINE -->
 <div class="timeline">
 
+  <!-- Hitachi (NEWEST) -->
   <div class="timeline-item right">
     <div class="timeline-dot"></div>
-    <div class="timeline-card"
-      data-images="images/260502102631012.JPG,images/hitachi2.jpg,images/hitachi3.jpg,images/hitachi4.jpg">
-
+    <div class="timeline-card">
       <img src="images/260502102631012.JPG" alt="Hitachi Seaside Park">
-
       <div>
         <span class="timeline-date">May 2, 2026</span>
         <h3>Hitachi Seaside Park</h3>
         <p>Visit in Japan.</p>
       </div>
-
     </div>
   </div>
 
+  <!-- Workshop -->
   <div class="timeline-item left">
     <div class="timeline-dot"></div>
-    <div class="timeline-card"
-      data-images="images/workshop.jpg,images/workshop2.jpg,images/workshop3.jpg">
-
+    <div class="timeline-card">
       <img src="images/workshop.jpg" alt="Workshop">
-
       <div>
         <span class="timeline-date">April 25, 2026</span>
         <h3>Japan–Thai Workshop</h3>
         <p>Presented research work.</p>
       </div>
-
     </div>
   </div>
 
+  <!-- Trek -->
   <div class="timeline-item right">
     <div class="timeline-dot"></div>
-    <div class="timeline-card"
-      data-images="images/trek.jpg,images/trek2.jpg,images/trek3.jpg">
-
+    <div class="timeline-card">
       <img src="images/trek.jpg" alt="Trekking">
-
       <div>
         <span class="timeline-date">March 21, 2026</span>
         <h3>Trekking</h3>
         <p>Outdoor activity.</p>
       </div>
-
     </div>
   </div>
 
+  <!-- Joined Lab -->
   <div class="timeline-item left">
     <div class="timeline-dot"></div>
-    <div class="timeline-card"
-      data-images="images/lab.jpg,images/lab2.jpg,images/lab3.jpg">
-
+    <div class="timeline-card">
       <img src="images/lab.jpg" alt="Shigeta Lab">
-
       <div>
         <span class="timeline-date">March 3, 2026</span>
         <h3>Joined Shigeta Lab</h3>
         <p>Started research work.</p>
       </div>
-
     </div>
   </div>
 
+  <!-- LOTUS -->
   <div class="timeline-item right">
     <div class="timeline-dot"></div>
-    <div class="timeline-card"
-      data-images="images/lotus.jpg,images/lotus2.jpg,images/lotus3.jpg">
-
+    <div class="timeline-card">
       <img src="images/lotus.jpg" alt="LOTUS Fellowship">
-
       <div>
         <span class="timeline-date">2026</span>
         <h3>LOTUS Fellowship</h3>
         <p>Awarded LOTUS Fellowship.</p>
       </div>
-
     </div>
   </div>
 
+  <!-- MCBR -->
   <div class="timeline-item left">
     <div class="timeline-dot"></div>
-    <div class="timeline-card"
-      data-images="images/mcbr.jpg,images/mcbr2.jpg">
-
+    <div class="timeline-card">
       <img src="images/mcbr.jpg" alt="MCBR Conference">
-
       <div>
         <span class="timeline-date">Dec 2025</span>
         <h3>MCBR Conference</h3>
         <p>Best Poster Award.</p>
       </div>
-
     </div>
   </div>
 
+  <!-- ML4Sci -->
   <div class="timeline-item right">
     <div class="timeline-dot"></div>
-    <div class="timeline-card"
-      data-images="images/ML4SCi.jpg,images/ml4sci2.jpg,images/ml4sci3.jpg">
-
+    <div class="timeline-card">
       <img src="images/ML4SCi.jpg" alt="ML4Sci">
-
       <div>
         <span class="timeline-date">2025</span>
         <h3>ML4Sci Winter School</h3>
         <p>Winning team (coding challenge).</p>
       </div>
-
     </div>
   </div>
 
+  <!-- PhD (OLDEST) -->
   <div class="timeline-item left">
     <div class="timeline-dot"></div>
-    <div class="timeline-card"
-      data-images="images/PhD.jpg,images/phd2.jpg">
-
+    <div class="timeline-card">
       <img src="images/PhD.jpg" alt="PhD">
-
       <div>
         <span class="timeline-date">Ph.D Awarded</span>
         <h3>Doctor of Philosophy</h3>
         <p>Completed Ph.D in Computational Sciences.</p>
       </div>
-
     </div>
   </div>
 
@@ -158,123 +134,45 @@
 
 <!-- LIGHTBOX -->
 <div id="lightbox" class="lightbox">
-
   <span class="close">&times;</span>
-
-  <button id="prev" class="nav-btn">&#10094;</button>
-
-  <div class="slider-wrapper">
-    <img id="lightbox-img" class="lightbox-img">
-  </div>
-
-  <button id="next" class="nav-btn">&#10095;</button>
-
+  <img id="lightbox-img" class="lightbox-content">
 </div>
 
-<!-- SCRIPT -->
 <script>
-const cards = document.querySelectorAll(".timeline-card");
+/* LIGHTBOX */
+const images = document.querySelectorAll(".timeline-card img");
 const lightbox = document.getElementById("lightbox");
-const img = document.getElementById("lightbox-img");
+const lightboxImg = document.getElementById("lightbox-img");
 
-const prevBtn = document.getElementById("prev");
-const nextBtn = document.getElementById("next");
-
-let images = [];
-let index = 0;
-let timer = null;
-let paused = false;
-
-function showImage(direction = "next") {
-  img.style.opacity = "0";
-  img.style.transform = direction === "next"
-    ? "translateX(60px)"
-    : "translateX(-60px)";
-
-  setTimeout(() => {
-    img.src = images[index];
-
-    requestAnimationFrame(() => {
-      img.style.transition = "all 0.5s ease";
-      img.style.opacity = "1";
-      img.style.transform = "translateX(0)";
-    });
-
-  }, 150);
-}
-
-function startAuto() {
-  timer = setInterval(() => {
-    if (paused) return;
-
-    index++;
-
-    if (index >= images.length) {
-      closeLightbox();
-      return;
-    }
-
-    showImage("next");
-  }, 2500);
-}
-
-function stopAuto() {
-  clearInterval(timer);
-}
-
-function closeLightbox() {
-  stopAuto();
-  lightbox.style.display = "none";
-}
-
-cards.forEach(card => {
-  card.onclick = () => {
-    images = card.getAttribute("data-images").split(",");
-    index = 0;
-
-    lightbox.style.display = "flex";
-    showImage("next");
-    startAuto();
+images.forEach(img => {
+  img.onclick = () => {
+    lightbox.style.display = "block";
+    lightboxImg.src = img.src;
   };
 });
 
-nextBtn.onclick = (e) => {
-  e.stopPropagation();
-  index++;
-
-  if (index >= images.length) {
-    closeLightbox();
-    return;
-  }
-
-  showImage("next");
+document.querySelector(".close").onclick = () => {
+  lightbox.style.display = "none";
 };
-
-prevBtn.onclick = (e) => {
-  e.stopPropagation();
-
-  if (index > 0) {
-    index--;
-    showImage("prev");
-  }
-};
-
-document.querySelector(".close").onclick = closeLightbox;
 
 lightbox.onclick = (e) => {
-  if (e.target === lightbox) closeLightbox();
+  if (e.target === lightbox) {
+    lightbox.style.display = "none";
+  }
 };
 
-lightbox.onmouseenter = () => paused = true;
-lightbox.onmouseleave = () => paused = false;
+/* SCROLL ANIMATION */
+const items = document.querySelectorAll(".timeline-item");
 
-document.addEventListener("keydown", (e) => {
-  if (lightbox.style.display !== "flex") return;
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+}, { threshold: 0.2 });
 
-  if (e.key === "ArrowRight") nextBtn.click();
-  if (e.key === "ArrowLeft") prevBtn.click();
-  if (e.key === "Escape") closeLightbox();
-});
+items.forEach(item => observer.observe(item));
 </script>
 
 </body>
