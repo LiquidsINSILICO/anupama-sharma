@@ -28,10 +28,8 @@
 
   <div class="timeline-item right">
     <div class="timeline-dot"></div>
-    <div class="timeline-card gallery">
-      <div class="gallery-track">
-        <img src="images/260502102631012.JPG" alt="Hitachi Seaside Park">
-      </div>
+    <div class="timeline-card">
+      <img src="images/260502102631012.JPG" alt="">
       <div>
         <span class="timeline-date">May 2, 2026</span>
         <h3>Hitachi Seaside Park</h3>
@@ -42,10 +40,8 @@
 
   <div class="timeline-item left">
     <div class="timeline-dot"></div>
-    <div class="timeline-card gallery">
-      <div class="gallery-track">
-        <img src="images/workshop.jpg" alt="Workshop">
-      </div>
+    <div class="timeline-card">
+      <img src="images/workshop.jpg" alt="">
       <div>
         <span class="timeline-date">April 25, 2026</span>
         <h3>Japan–Thai Workshop</h3>
@@ -56,10 +52,8 @@
 
   <div class="timeline-item right">
     <div class="timeline-dot"></div>
-    <div class="timeline-card gallery">
-      <div class="gallery-track">
-        <img src="images/trek.jpg" alt="Trekking">
-      </div>
+    <div class="timeline-card">
+      <img src="images/trek.jpg" alt="">
       <div>
         <span class="timeline-date">March 21, 2026</span>
         <h3>Trekking</h3>
@@ -70,10 +64,8 @@
 
   <div class="timeline-item left">
     <div class="timeline-dot"></div>
-    <div class="timeline-card gallery">
-      <div class="gallery-track">
-        <img src="images/lab.jpg" alt="Shigeta Lab">
-      </div>
+    <div class="timeline-card">
+      <img src="images/lab.jpg" alt="">
       <div>
         <span class="timeline-date">March 3, 2026</span>
         <h3>Joined Shigeta Lab</h3>
@@ -84,24 +76,20 @@
 
   <div class="timeline-item right">
     <div class="timeline-dot"></div>
-    <div class="timeline-card gallery">
-      <div class="gallery-track">
-        <img src="images/lotus.jpg" alt="LOTUS Fellowship">
-      </div>
+    <div class="timeline-card">
+      <img src="images/lotus.jpg" alt="">
       <div>
         <span class="timeline-date">2026</span>
         <h3>LOTUS Fellowship</h3>
-        <p>Awarded LOTUS Fellowship.</p>
+        <p>Awarded fellowship.</p>
       </div>
     </div>
   </div>
 
   <div class="timeline-item left">
     <div class="timeline-dot"></div>
-    <div class="timeline-card gallery">
-      <div class="gallery-track">
-        <img src="images/mcbr.jpg" alt="MCBR Conference">
-      </div>
+    <div class="timeline-card">
+      <img src="images/mcbr.jpg" alt="">
       <div>
         <span class="timeline-date">Dec 2025</span>
         <h3>MCBR Conference</h3>
@@ -112,28 +100,24 @@
 
   <div class="timeline-item right">
     <div class="timeline-dot"></div>
-    <div class="timeline-card gallery">
-      <div class="gallery-track">
-        <img src="images/ML4SCi.jpg" alt="ML4Sci">
-      </div>
+    <div class="timeline-card">
+      <img src="images/ML4SCi.jpg" alt="">
       <div>
         <span class="timeline-date">2025</span>
         <h3>ML4Sci Winter School</h3>
-        <p>Winning team (coding challenge).</p>
+        <p>Winning team.</p>
       </div>
     </div>
   </div>
 
   <div class="timeline-item left">
     <div class="timeline-dot"></div>
-    <div class="timeline-card gallery">
-      <div class="gallery-track">
-        <img src="images/PhD.jpg" alt="PhD">
-      </div>
+    <div class="timeline-card">
+      <img src="images/PhD.jpg" alt="">
       <div>
         <span class="timeline-date">Ph.D Awarded</span>
         <h3>Doctor of Philosophy</h3>
-        <p>Completed Ph.D in Computational Sciences.</p>
+        <p>Completed PhD.</p>
       </div>
     </div>
   </div>
@@ -182,15 +166,15 @@ const observer = new IntersectionObserver(entries => {
 
 items.forEach(item => observer.observe(item));
 
-/* ================= GALLERY LOGIC (NEW) ================= */
-document.querySelectorAll(".gallery-track").forEach(track => {
-  const imgs = Array.from(track.querySelectorAll("img"));
+/* ================= SAFE GALLERY (NO BREAK VERSION) ================= */
+document.querySelectorAll(".timeline-card").forEach(card => {
+  const imgs = Array.from(card.querySelectorAll("img"));
 
-  if (imgs.length === 0) return;
+  if (imgs.length <= 1) return; // safe guard
 
   function update(activeIndex) {
     imgs.forEach((img, i) => {
-      img.className = "";
+      img.classList.remove("active","left-1","left-2","right-1","right-2");
 
       const diff = i - activeIndex;
 
@@ -203,7 +187,10 @@ document.querySelectorAll(".gallery-track").forEach(track => {
   }
 
   imgs.forEach((img, index) => {
-    img.addEventListener("click", () => update(index));
+    img.addEventListener("click", (e) => {
+      e.stopPropagation(); // prevents lightbox conflict
+      update(index);
+    });
   });
 
   update(0);
