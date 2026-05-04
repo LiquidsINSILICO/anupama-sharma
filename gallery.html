@@ -1,3 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navigation">
+  <a href="index.html">Home</a>
+  <a href="about.html">About Me</a>
+  <a href="research.html">Research</a>
+  <a href="publications.html">Publications</a>
+  <a href="resources.html">Resources</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<!-- Header -->
+<div class="top-bar">
+  <div class="top-bar-inner">Gallery</div>
+</div>
+
+<!-- TIMELINE -->
+<div class="timeline">
+
+  <!-- Hitachi (NEWEST) -->
+  <div class="timeline-item right">
+    <div class="timeline-dot"></div>
+    <div class="timeline-card">
+      <img src="images/260502102631012.JPG" alt="Hitachi Seaside Park">
+      <div>
+        <span class="timeline-date">May 2, 2026</span>
+        <h3>Hitachi Seaside Park</h3>
+        <p>Visit in Japan.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Workshop -->
+  <div class="timeline-item left">
+    <div class="timeline-dot"></div>
+    <div class="timeline-card">
+      <img src="images/workshop.jpg" alt="Workshop">
+      <div>
+        <span class="timeline-date">April 25, 2026</span>
+        <h3>Japan–Thai Workshop</h3>
+        <p>Presented research work.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Trek -->
+  <div class="timeline-item right">
+    <div class="timeline-dot"></div>
+    <div class="timeline-card">
+      <img src="images/trek.jpg" alt="Trekking">
+      <div>
+        <span class="timeline-date">March 21, 2026</span>
+        <h3>Trekking</h3>
+        <p>Outdoor activity.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Joined Lab -->
+  <div class="timeline-item left">
+    <div class="timeline-dot"></div>
+    <div class="timeline-card">
+      <img src="images/lab.jpg" alt="Shigeta Lab">
+      <div>
+        <span class="timeline-date">March 3, 2026</span>
+        <h3>Joined Shigeta Lab</h3>
+        <p>Started research work.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOTUS -->
+  <div class="timeline-item right">
+    <div class="timeline-dot"></div>
+    <div class="timeline-card">
+      <img src="images/lotus.jpg" alt="LOTUS Fellowship">
+      <div>
+        <span class="timeline-date">2026</span>
+        <h3>LOTUS Fellowship</h3>
+        <p>Awarded LOTUS Fellowship.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MCBR -->
+  <div class="timeline-item left">
+    <div class="timeline-dot"></div>
+    <div class="timeline-card">
+      <img src="images/mcbr.jpg" alt="MCBR Conference">
+      <div>
+        <span class="timeline-date">Dec 2025</span>
+        <h3>MCBR Conference</h3>
+        <p>Best Poster Award.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ML4Sci -->
+  <div class="timeline-item right">
+    <div class="timeline-dot"></div>
+    <div class="timeline-card">
+      <img src="images/ML4SCi.jpg" alt="ML4Sci">
+      <div>
+        <span class="timeline-date">2025</span>
+        <h3>ML4Sci Winter School</h3>
+        <p>Winning team (coding challenge).</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PhD (OLDEST) -->
+  <div class="timeline-item left">
+    <div class="timeline-dot"></div>
+    <div class="timeline-card">
+      <img src="images/PhD.jpg" alt="PhD">
+      <div>
+        <span class="timeline-date">Ph.D Awarded</span>
+        <h3>Doctor of Philosophy</h3>
+        <p>Completed Ph.D in Computational Sciences.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
 <!-- LIGHTBOX -->
 <div id="lightbox" class="lightbox">
   <span class="close">&times;</span>
@@ -40,3 +174,6 @@ const observer = new IntersectionObserver(entries => {
 
 items.forEach(item => observer.observe(item));
 </script>
+
+</body>
+</html>
