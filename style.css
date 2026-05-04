@@ -663,7 +663,7 @@ body::before {
 ============================ */
 
 body.about-page {
-  background-image: url("images/sakura.jpg");
+  background-image: url("images/sakura.JPG");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
