@@ -657,3 +657,26 @@ body::before {
   background: rgba(245, 247, 251, 0.85);
   z-index: -1;
 }
+
+/* ============================
+   Sakura Background ONLY for About Page
+============================ */
+
+body.about-page {
+  background-image: url("images/sakura.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Soft overlay for readability */
+body.about-page::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(245, 247, 251, 0.82);
+  z-index: -1;
+}
