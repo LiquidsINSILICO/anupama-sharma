@@ -486,3 +486,35 @@ body.publications-page::before {
   display: block;
 }
 
+/* ============================
+   Gallery Styles
+============================ */
+
+.gallery-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 1rem;
+}
+
+.gallery-item {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.gallery-item p {
+  padding: 10px;
+  font-size: 0.95rem;
+  color: #333;
+}
