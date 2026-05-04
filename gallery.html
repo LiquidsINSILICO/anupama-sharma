@@ -40,6 +40,28 @@
   </div>
 
   <!-- Workshop -->
+  <!-- MAIN IMAGE -->
+  <img src="images/workshop.jpg" class="gallery-main" alt="Workshop">
+
+      <!-- OPTIONAL THUMBNAILS -->
+      <div class="gallery-thumbs">
+        <img src="images/workshop.jpg" alt="">
+        <img src="images/workshop2.jpg" alt="">
+        <img src="images/workshop3.jpg" alt="">
+      </div>
+
+    </div>
+
+    <!-- TEXT (UNCHANGED) -->
+    <div>
+      <span class="timeline-date">April 25, 2026</span>
+      <h3>Japan–Thai Workshop</h3>
+      <p>Presented research work.</p>
+    </div>
+
+  </div>
+</div>
+  
   <div class="timeline-item left">
     <div class="timeline-dot"></div>
     <div class="timeline-card">
@@ -174,6 +196,17 @@ const observer = new IntersectionObserver(entries => {
 
 items.forEach(item => observer.observe(item));
 </script>
+  
+  document.querySelectorAll(".timeline-gallery").forEach(gallery => {
+  const main = gallery.querySelector(".gallery-main");
+  const thumbs = gallery.querySelectorAll(".gallery-thumbs img");
+
+  thumbs.forEach(t => {
+    t.addEventListener("click", () => {
+      main.src = t.src;
+    });
+  });
+});
 
 </body>
 </html>
