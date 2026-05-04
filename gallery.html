@@ -139,40 +139,69 @@
 </div>
 
 <script>
-/* LIGHTBOX */
-const images = document.querySelectorAll(".timeline-card img");
+const cards = document.querySelectorAll(".timeline-card");
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 
-images.forEach(img => {
-  img.onclick = () => {
+let images = [];
+let index = 0;
+let timer;
+
+/* open gallery */
+cards.forEach(card => {
+  card.onclick = () => {
+    const data = card.getAttribute("data-images");
+
+    if (!data) return;
+
+    images = data.split(",");
+    index = 0;
+
     lightbox.style.display = "block";
-    lightboxImg.src = img.src;
+    lightboxImg.src = images[index];
+
+    startSlide();
   };
 });
 
-document.querySelector(".close").onclick = () => {
+/* slideshow */
+function startSlide() {
+  clearInterval(timer);
+
+  timer = setInterval(() => {
+    index++;
+
+    if (index >= images.length) {
+      closeLightbox();
+      return;
+    }
+
+    fadeImage(images[index]);
+
+  }, 2500);
+}
+
+/* simple fade (SAFE, no layout break) */
+function fadeImage(src) {
+  lightboxImg.style.opacity = 0;
+
+  setTimeout(() => {
+    lightboxImg.src = src;
+    lightboxImg.style.opacity = 1;
+  }, 200);
+}
+
+/* close */
+function closeLightbox() {
+  clearInterval(timer);
   lightbox.style.display = "none";
-};
+}
+
+document.querySelector(".close").onclick = closeLightbox;
 
 lightbox.onclick = (e) => {
-  if (e.target === lightbox) {
-    lightbox.style.display = "none";
-  }
+  if (e.target === lightbox) closeLightbox();
 };
-
-/* SCROLL ANIMATION */
-const items = document.querySelectorAll(".timeline-item");
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    }
-  });
-}, { threshold: 0.2 });
-
-items.forEach(item => observer.observe(item));
 </script>
 
 </body>
