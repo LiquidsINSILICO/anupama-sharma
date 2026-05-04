@@ -1,129 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Gallery</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<!-- Navigation -->
-<nav class="navigation">
-  <a href="index.html">Home</a>
-  <a href="about.html">About Me</a>
-  <a href="research.html">Research</a>
-  <a href="publications.html">Publications</a>
-  <a href="resources.html">Resources</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
-<!-- Header -->
-<div class="top-bar">
-  <div class="top-bar-inner">Gallery</div>
-</div>
-
-<!-- TIMELINE -->
-<div class="timeline">
-
-  <div class="timeline-item right">
-    <div class="timeline-dot"></div>
-    <div class="timeline-card">
-      <img src="images/260502102631012.JPG" alt="">
-      <div>
-        <span class="timeline-date">May 2, 2026</span>
-        <h3>Hitachi Seaside Park</h3>
-        <p>Visit in Japan.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="timeline-item left">
-    <div class="timeline-dot"></div>
-    <div class="timeline-card">
-      <img src="images/workshop.jpg" alt="">
-      <div>
-        <span class="timeline-date">April 25, 2026</span>
-        <h3>Japan–Thai Workshop</h3>
-        <p>Presented research work.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="timeline-item right">
-    <div class="timeline-dot"></div>
-    <div class="timeline-card">
-      <img src="images/trek.jpg" alt="">
-      <div>
-        <span class="timeline-date">March 21, 2026</span>
-        <h3>Trekking</h3>
-        <p>Outdoor activity.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="timeline-item left">
-    <div class="timeline-dot"></div>
-    <div class="timeline-card">
-      <img src="images/lab.jpg" alt="">
-      <div>
-        <span class="timeline-date">March 3, 2026</span>
-        <h3>Joined Shigeta Lab</h3>
-        <p>Started research work.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="timeline-item right">
-    <div class="timeline-dot"></div>
-    <div class="timeline-card">
-      <img src="images/lotus.jpg" alt="">
-      <div>
-        <span class="timeline-date">2026</span>
-        <h3>LOTUS Fellowship</h3>
-        <p>Awarded fellowship.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="timeline-item left">
-    <div class="timeline-dot"></div>
-    <div class="timeline-card">
-      <img src="images/mcbr.jpg" alt="">
-      <div>
-        <span class="timeline-date">Dec 2025</span>
-        <h3>MCBR Conference</h3>
-        <p>Best Poster Award.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="timeline-item right">
-    <div class="timeline-dot"></div>
-    <div class="timeline-card">
-      <img src="images/ML4SCi.jpg" alt="">
-      <div>
-        <span class="timeline-date">2025</span>
-        <h3>ML4Sci Winter School</h3>
-        <p>Winning team.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="timeline-item left">
-    <div class="timeline-dot"></div>
-    <div class="timeline-card">
-      <img src="images/PhD.jpg" alt="">
-      <div>
-        <span class="timeline-date">Ph.D Awarded</span>
-        <h3>Doctor of Philosophy</h3>
-        <p>Completed PhD.</p>
-      </div>
-    </div>
-  </div>
-
-</div>
-
 <!-- LIGHTBOX -->
 <div id="lightbox" class="lightbox">
   <span class="close">&times;</span>
@@ -131,7 +5,7 @@
 </div>
 
 <script>
-/* ================= LIGHTBOX ================= */
+/* LIGHTBOX */
 const images = document.querySelectorAll(".timeline-card img");
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
@@ -153,7 +27,7 @@ lightbox.onclick = (e) => {
   }
 };
 
-/* ================= SCROLL ANIMATION ================= */
+/* SCROLL ANIMATION */
 const items = document.querySelectorAll(".timeline-item");
 
 const observer = new IntersectionObserver(entries => {
@@ -165,37 +39,4 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.2 });
 
 items.forEach(item => observer.observe(item));
-
-/* ================= SAFE GALLERY (NO BREAK VERSION) ================= */
-document.querySelectorAll(".timeline-card").forEach(card => {
-  const imgs = Array.from(card.querySelectorAll("img"));
-
-  if (imgs.length <= 1) return; // safe guard
-
-  function update(activeIndex) {
-    imgs.forEach((img, i) => {
-      img.classList.remove("active","left-1","left-2","right-1","right-2");
-
-      const diff = i - activeIndex;
-
-      if (diff === 0) img.classList.add("active");
-      else if (diff === -1) img.classList.add("left-1");
-      else if (diff === -2) img.classList.add("left-2");
-      else if (diff === 1) img.classList.add("right-1");
-      else if (diff === 2) img.classList.add("right-2");
-    });
-  }
-
-  imgs.forEach((img, index) => {
-    img.addEventListener("click", (e) => {
-      e.stopPropagation(); // prevents lightbox conflict
-      update(index);
-    });
-  });
-
-  update(0);
-});
 </script>
-
-</body>
-</html>
