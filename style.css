@@ -720,3 +720,72 @@ body:not(.home-page) {
 }
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ++++++++++++++++++++++++++++++++++++++++++++*/
+/* ============================
+   MODERN GALLERY LIGHTBOX (NEW)
+============================ */
+
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* image wrapper */
+.slider-wrapper {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* main image */
+.lightbox-img {
+  max-width: 100%;
+  max-height: 100%;
+  transition: all 0.5s ease;
+  opacity: 1;
+}
+
+/* slide effect helpers */
+.slide-left {
+  transform: translateX(-60px);
+  opacity: 0;
+}
+
+.slide-right {
+  transform: translateX(60px);
+  opacity: 0;
+}
+
+/* navigation buttons */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 32px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  user-select: none;
+}
+
+#prev { left: 20px; }
+#next { right: 20px; }
+
+/* close button */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 35px;
+  color: white;
+  cursor: pointer;
+}
