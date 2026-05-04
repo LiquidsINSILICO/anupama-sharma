@@ -711,5 +711,12 @@ body:not(.home-page) {
   transform: scale(1.05);
 }
 
+.timeline-card .gallery-main {
+  width: 100%;
+  max-width: 250px;   /* controls size inside timeline */
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ++++++++++++++++++++++++++++++++++++++++++++*/
