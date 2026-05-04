@@ -718,5 +718,23 @@ body:not(.home-page) {
   display: block;
   border-radius: 10px;
 }
+
+.timeline-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gallery-thumbs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  max-width: 250px;
+}
+
+.timeline-card img {
+  max-width: 100%;
+  height: auto;
+}
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ++++++++++++++++++++++++++++++++++++++++++++*/
