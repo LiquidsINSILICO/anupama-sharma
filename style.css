@@ -642,7 +642,7 @@ body {
    Sakura Background ONLY for About Page
 ============================ */
 
-body.about-page {
+body.home-page {
   background-image: url("images/sakura.JPG");
   background-size: cover;
   background-position: center;
@@ -650,7 +650,7 @@ body.about-page {
 }
 
 /* Soft overlay for readability */
-body.about-page::before {
+body.home-page::before {
   content: "";
   position: fixed;
   top: 0;
