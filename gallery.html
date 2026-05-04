@@ -197,16 +197,5 @@ const observer = new IntersectionObserver(entries => {
 items.forEach(item => observer.observe(item));
 </script>
   
-  document.querySelectorAll(".timeline-gallery").forEach(gallery => {
-  const main = gallery.querySelector(".gallery-main");
-  const thumbs = gallery.querySelectorAll(".gallery-thumbs img");
-
-  thumbs.forEach(t => {
-    t.addEventListener("click", () => {
-      main.src = t.src;
-    });
-  });
-});
-
 </body>
 </html>
