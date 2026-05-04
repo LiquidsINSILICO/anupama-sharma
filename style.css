@@ -487,11 +487,6 @@ body.publications-page::before {
 }
 
 /* ===== BASIC RESET ===== */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f7fb;
-}
 
 /* ===== NAVIGATION ===== */
 .navigation {
